@@ -1,0 +1,144 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                     Int             @id @default(autoincrement())
+  email                  String          @unique
+  password               String
+  name                   String?
+  role                   String          @default("user")
+  createdAt              DateTime        @default(now())
+  resetCode              String?
+  resetCodeExp           DateTime?
+  activities             ActivityLog[]
+  comments               Comment[]
+  receivedDirectMessages DirectMessage[] @relation("ReceivedDirectMessages")
+  sentDirectMessages     DirectMessage[] @relation("SentDirectMessages")
+  projects               Project[]
+  memberships            ProjectMember[]
+  assignedTasks          Task[]          @relation("AssignedTasks")
+}
+
+model Project {
+  id          Int             @id @default(autoincrement())
+  title       String
+  description String?
+  userId      Int
+  createdAt   DateTime        @default(now())
+  background  String          @default("linear-gradient(135deg, #1e293b 0%, #0f172a 100%)")
+  columns     Column[]
+  user        User            @relation(fields: [userId], references: [id])
+  members     ProjectMember[]
+  tasks       Task[]
+}
+
+model ProjectMember {
+  id        Int     @id @default(autoincrement())
+  role      String  @default("DEVELOPER")
+  userId    Int
+  projectId Int
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  user      User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, projectId])
+}
+
+model Task {
+  id           Int              @id @default(autoincrement())
+  title        String
+  description  String?
+  status       String           @default("todo")
+  priority     String           @default("medium")
+  dueDate      String?
+  projectId    Int
+  createdAt    DateTime         @default(now())
+  columnId     Int?
+  startDate    String?
+  assignedToId Int?
+  activities   ActivityLog[]
+  attachments  TaskAttachment[]
+  items        ChecklistItem[]
+  comments     Comment[]
+  labels       Label[]
+  assignedTo   User?            @relation("AssignedTasks", fields: [assignedToId], references: [id])
+  column       Column?          @relation(fields: [columnId], references: [id], onDelete: Cascade)
+  project      Project          @relation(fields: [projectId], references: [id])
+}
+
+model TaskAttachment {
+  id           Int      @id @default(autoincrement())
+  originalName String
+  storedName   String
+  mimeType     String
+  size         Int
+  filePath     String
+  taskId       Int
+  createdAt    DateTime @default(now())
+
+  task Task @relation(fields: [taskId], references: [id], onDelete: Cascade)
+}
+
+model ChecklistItem {
+  id          Int      @id @default(autoincrement())
+  title       String
+  isCompleted Boolean  @default(false)
+  taskId      Int
+  createdAt   DateTime @default(now())
+  task        Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
+}
+
+model Label {
+  id        Int      @id @default(autoincrement())
+  text      String
+  color     String   @default("#3b82f6")
+  taskId    Int
+  createdAt DateTime @default(now())
+  task      Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  text      String
+  taskId    Int
+  userId    Int
+  createdAt DateTime @default(now())
+  task      Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model ActivityLog {
+  id        Int      @id @default(autoincrement())
+  action    String
+  taskId    Int
+  userId    Int
+  createdAt DateTime @default(now())
+  task      Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+model Column {
+  id        Int      @id @default(autoincrement())
+  title     String
+  order     Int      @default(0)
+  color     String   @default("#3b82f6")
+  projectId Int
+  createdAt DateTime @default(now())
+  project   Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  tasks     Task[]
+}
+
+model DirectMessage {
+  id         Int      @id @default(autoincrement())
+  text       String
+  createdAt  DateTime @default(now())
+  senderId   Int
+  receiverId Int
+  receiver   User     @relation("ReceivedDirectMessages", fields: [receiverId], references: [id], onDelete: Cascade)
+  sender     User     @relation("SentDirectMessages", fields: [senderId], references: [id], onDelete: Cascade)
+}

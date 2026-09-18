@@ -1,0 +1,5239 @@
+:root {
+  --bg-main: #f8fafc;
+  --panel-bg: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --hover-bg: #f1f5f9;
+}
+
+[data-theme='dark'] {
+  --bg-main: #080d1a;
+  --panel-bg: #0e1626;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: #1e293b;
+  --hover-bg: #152033;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-main);
+  background-color: #080d1a;
+}
+
+/* ======================================================== */
+/* 🌟 AUTH EKRANI & ÇİFT IŞIKLI (GLOW) ARKA PLAN           */
+/* ======================================================== */
+.auth-hero-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #080d1a;
+  background-image: 
+    radial-gradient(circle at 12% 15%, rgba(56, 189, 248, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 88% 85%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+  padding: 32px 24px;
+}
+
+.auth-split-container {
+  display: flex;
+  width: 100%;
+  max-width: 1080px;
+  min-height: 620px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 35px 70px -20px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  margin: auto;
+  background: #0e1626;
+}
+
+.auth-showcase-panel {
+  flex: 1.2;
+  background-color: #152033;
+  padding: 44px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: inset -1px 0 15px rgba(0, 0, 0, 0.15);
+  text-align: left !important;
+}
+
+.auth-showcase-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.auth-brand-head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.logo-glow-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.showcase-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  border-radius: 20px;
+  color: #38bdf8;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  width: fit-content;
+}
+
+.auth-showcase-panel h1 {
+  font-size: 26px !important;
+  line-height: 1.35 !important;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  text-align: left !important;
+}
+
+.auth-showcase-panel .showcase-desc {
+  margin: 0 0 28px 0;
+  line-height: 1.6;
+  color: #94a3b8;
+  font-size: 13.5px;
+  text-align: left !important;
+}
+
+.showcase-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 12px 16px;
+  border-radius: 12px;
+  text-align: left !important;
+}
+
+.feature-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(37, 99, 235, 0.15);
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.feature-item strong {
+  display: block;
+  color: #f8fafc;
+  font-size: 13px;
+  margin-bottom: 2px;
+  font-weight: 700;
+  text-align: left !important;
+}
+
+.feature-item p {
+  margin: 0;
+  font-size: 12px;
+  color: #94a3b8;
+  line-height: 1.45;
+  text-align: left !important;
+}
+
+.auth-form-panel {
+  flex: 1;
+  background-color: #0e1626;
+  padding: 44px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.auth-card-modern {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.auth-header-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.btn-header-back-col {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  padding: 0;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.btn-header-back-col:hover {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+}
+
+.auth-header-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 4px;
+}
+
+.auth-header-content h2 {
+  font-size: clamp(20px, 4vw, 24px);
+  margin: 0 0 6px 0;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.auth-header-content p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.auth-header-spacer {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+.auth-modern-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.input-field-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-field-wrap > svg {
+  position: absolute;
+  left: 14px;
+  color: #64748b;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.input-field-wrap input {
+  width: 100%;
+  height: 46px;
+  padding: 0 44px;
+  background: #152033;
+  border: 1.5px solid #233147;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 13.5px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-field-wrap input::placeholder {
+  color: #64748b;
+}
+
+.input-field-wrap input:focus {
+  border-color: #2563eb;
+  background: #17243a;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.input-field-wrap button {
+  position: absolute !important;
+  right: 12px !important;
+  left: auto !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background: transparent !important;
+  border: none !important;
+  color: #64748b !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 6px !important;
+  z-index: 2;
+}
+
+.password-rule-pill {
+  font-size: 11.5px;
+  color: #94a3b8;
+  margin-top: 5px;
+  margin-left: 2px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.password-rule-pill.valid {
+  color: #34d399;
+  font-weight: 600;
+}
+
+.field-error-text {
+  font-size: 11.5px;
+  color: #f87171;
+  margin-top: 4px;
+  margin-left: 2px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.register-success-alert {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #34d399;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.forgot-password-link-wrap {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2px;
+}
+
+.btn-forgot-link {
+  background: transparent;
+  border: none;
+  color: #38bdf8;
+  font-size: 12.5px;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 500;
+}
+
+.btn-forgot-link:hover {
+  text-decoration: underline;
+}
+
+.btn-modern-submit {
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 4px;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
+.btn-modern-submit:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #4338ca 100%);
+  transform: translateY(-1px);
+}
+
+.demo-accounts-divider {
+  text-align: center;
+  margin: 22px 0 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.demo-accounts-divider span {
+  position: relative;
+  top: -10px;
+  background: #0e1626;
+  padding: 0 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.8px;
+}
+
+.demo-quick-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-demo-fill {
+  padding: 11px 16px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: #e2e8f0;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.btn-demo-fill:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: #38bdf8;
+  color: #ffffff;
+}
+
+.auth-switch-footer {
+  margin-top: 22px;
+  text-align: center;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.auth-switch-footer button {
+  background: transparent;
+  border: none;
+  color: #38bdf8;
+  font-weight: 700;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.auth-error {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 12.5px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+/* ======================================================== */
+/* 💎 MODALLAR & ŞİFRE SIFIRLAMA PIN KUTULARI               */
+/* ======================================================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 13, 26, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 480px;
+  background: #0e1626;
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75);
+  color: #f8fafc;
+}
+
+.modal-card-sm {
+  max-width: 420px;
+}
+
+.forgot-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.forgot-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.forgot-title-wrap h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.btn-modal-close-custom {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-modal-close-custom:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #f8fafc;
+}
+
+.forgot-desc-text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #94a3b8;
+  margin: 0 0 18px 0;
+  text-align: left;
+}
+
+.forgot-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.forgot-input-icon {
+  position: absolute;
+  left: 14px;
+  color: #64748b;
+}
+
+.forgot-input-wrap input {
+  width: 100%;
+  height: 46px;
+  padding-left: 42px !important;
+  padding-right: 14px !important;
+  border-radius: 12px;
+  border: 1.5px solid #233147;
+  background: #152033;
+  color: #ffffff;
+  font-size: 13.5px;
+  outline: none;
+}
+
+.pin-input-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.pin-box {
+  width: 100%;
+  height: 50px;
+  background: #152033;
+  border: 1.5px solid #233147;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  outline: none;
+}
+
+.pin-box:focus {
+  border-color: #2563eb;
+  background: #17243a;
+}
+
+.btn-forgot-submit {
+  width: 100%;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
+.forgot-feedback-success {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #34d399;
+  font-size: 12.5px;
+  font-weight: 600;
+  margin: 14px 24px 0;
+  text-align: left;
+}
+
+.security-timer-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #fbbf24;
+  background: rgba(245, 158, 11, 0.12);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 700;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.btn-resend-code {
+  background: transparent;
+  border: none;
+  color: #38bdf8;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.btn-resend-code:disabled {
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+/* ======================================================== */
+/* 🌟 ANA PANO (TRELLO CLONE) DÜZENİ & STİLLERİ           */
+/* ======================================================== */
+.trello-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  transition: background 0.3s ease;
+}
+
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 99999;
+}
+
+.toast-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.toast-item.success {
+  background: #065f46;
+  color: #34d399;
+  border: 1px solid #059669;
+}
+
+.toast-item.error {
+  background: #7f1d1d;
+  color: #f87171;
+  border: 1px solid #991b1b;
+}
+
+.user-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: rgba(8, 13, 26, 0.65);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.user-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.btn-header-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #f8fafc;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-header-action:hover {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+}
+
+.profile-nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px 5px 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.avatar-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* 🎯 Kesin Çözüm: Profil Menüsü Bulanıklığı Tamamen Giderildi ve Tema Bağımsız Yazı Netliği Sağlandı */
+.profile-dropdown-menu {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 280px;
+  background: var(--panel-bg, #0e1626) !important;
+  border: 1px solid var(--border-color, #1e293b);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 99999;
+  color: var(--text-main, #f8fafc) !important;
+  backdrop-filter: none !important;
+  opacity: 1 !important;
+}
+
+.profile-dropdown-menu span,
+.profile-dropdown-menu strong,
+.profile-dropdown-menu h4 {
+  color: var(--text-main, #f8fafc) !important;
+}
+
+.dropdown-user-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+  background: transparent !important;
+  opacity: 1 !important;
+}
+
+.dropdown-user-header h4 {
+  font-size: 14px;
+  color: var(--text-main, #ffffff) !important;
+  margin: 0;
+}
+
+.dropdown-user-header span {
+  font-size: 11px;
+  color: var(--text-muted, #94a3b8) !important;
+}
+
+/* "Bana Atanan Görevler" ve Menü İçindeki Tüm Butonlar İçin Net Görünürlük (Tema Bağımsız) */
+.profile-dropdown-menu button {
+  color: var(--text-main, #ffffff) !important;
+}
+
+/* "Oturumu Kapat" Butonu Sabit ve Okunur Renk */
+.profile-dropdown-menu button[style*="background: #fee2e2"],
+.profile-dropdown-menu button[style*="background: rgb(254, 226, 226)"] {
+  background: #dc2626 !important;
+  border: 1px solid #b91c1c !important;
+  color: #ffffff !important;
+}
+
+.boards-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px 24px;
+  background: rgba(8, 13, 26, 0.45);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  overflow-x: auto;
+}
+
+.boards-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.board-tab {
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.board-tab.active {
+  background: #2563eb;
+  border-color: #3b82f6;
+  color: #ffffff;
+}
+
+.btn-new-board {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #94a3b8;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.trello-header-custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  gap: 20px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-left h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.user-role-chip {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.chip-manager {
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: #fbbf24;
+}
+
+.chip-dev {
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #38bdf8;
+}
+
+.project-progress-widget {
+  width: 220px;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #94a3b8;
+  margin-bottom: 6px;
+}
+
+.widget-percentage {
+  color: #38bdf8;
+}
+
+.widget-bar-bg {
+  width: 100%;
+  height: 6px;
+  background: #1e293b;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.widget-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8 0%, #2563eb 100%);
+  border-radius: 3px;
+}
+
+.toolbar-modern {
+  display: flex;
+  align-items: center;
+  padding: 0 24px 16px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.search-box, .filter-box {
+  display: flex;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 0 12px;
+  height: 38px;
+  color: #94a3b8;
+}
+
+.search-box input, .filter-box select {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 13px;
+  margin-left: 8px;
+}
+
+.filter-box select option {
+  background: #0e1626;
+  color: #fff;
+}
+
+.btn-my-tasks-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 38px;
+  padding: 0 14px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-my-tasks-toggle.active {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.35);
+  color: #34d399;
+}
+
+.btn-create-task-main {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 38px;
+  padding: 0 16px;
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+}
+
+.board-scroll-area {
+  flex: 1;
+  overflow-x: auto;
+  padding: 0 24px 24px;
+}
+
+.board {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  min-height: 70vh;
+}
+
+.column {
+  width: 280px;
+  min-width: 280px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 220px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.col-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.task-list {
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.task-card {
+  background: #152033;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.task-card:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-2px);
+}
+
+.task-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.priority-tag {
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.priority-tag.low { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+.priority-tag.medium { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+.priority-tag.high { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+
+.task-card h4 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0;
+}
+
+.card-label-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+  color: #fff;
+  display: inline-block;
+}
+
+.task-date-badge {
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+}
+
+.task-date-badge.due-overdue { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+.task-date-badge.due-soon { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+.task-date-badge.due-done { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+
+.task-assignee-badge {
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.btn-column-add-task {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.btn-add-column-trigger {
+  width: 280px;
+  min-width: 280px;
+  height: 48px;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  color: #cbd5e1;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.board-chat-dock-wrapper {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+}
+
+.btn-chat-trigger-modern {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.6);
+}
+
+.board-chat-dock-panel {
+  width: 340px;
+  height: 460px;
+  background: #0e1626;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  color: #f8fafc;
+}
+
+.chat-dock-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: #152033;
+  border-bottom: 1px solid #1e293b;
+  color: #fff;
+}
+
+.chat-dock-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-dock-close {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+}
+
+.chat-dock-search {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-dock-icon {
+  position: absolute;
+  left: 18px;
+  color: #64748b;
+}
+
+.chat-dock-search input {
+  width: 100%;
+  padding: 7px 10px 7px 32px;
+  background: var(--hover-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: inherit;
+  font-size: 12.5px;
+  outline: none;
+}
+
+.chat-dock-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.chat-dock-user-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.chat-dock-user-item:hover {
+  background: var(--hover-bg);
+}
+
+.avatar-circle-dock {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.stat-box {
+  background: var(--hover-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-box strong {
+  font-size: 20px;
+}
+
+.member-invite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--hover-bg);
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}/* 📋 Pano Başlığı ve Pano İçi Butonlar */
+.trello-header-custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.header-left h1 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.4px;
+}
+
+.board-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 10px;
+}
+
+.btn-board-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: #f8fafc;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-board-inline:hover {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+}
+
+/* 🎨 Genişletilmiş Sütunlar ve Board Alanı */
+.board {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  min-height: 72vh;
+}
+
+.column {
+  width: 310px;
+  min-width: 310px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 210px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.btn-add-column-trigger {
+  width: 310px;
+  min-width: 310px;
+  height: 50px;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1.5px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.btn-add-column-trigger:hover {
+  background: rgba(15, 23, 42, 0.85);
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+/* 💬 Ekip Sohbeti Butonu */
+.btn-chat-trigger-modern {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.65);
+  transition: all 0.2s ease;
+}
+
+.btn-chat-trigger-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -5px rgba(37, 99, 235, 0.8);
+}/* 📋 Yeni Pano Formu Tasarım Sistemi Entegrasyonu */
+.new-board-form-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.new-board-input-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-board-input-wrap input {
+  width: 220px;
+  height: 38px;
+  padding: 0 12px;
+  background: #152033;
+  border: 1.5px solid #233147;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.new-board-input-wrap input::placeholder {
+  color: #64748b;
+}
+
+.new-board-input-wrap input:focus {
+  border-color: #2563eb;
+  background: #17243a;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.new-board-error-msg {
+  position: absolute;
+  top: 42px;
+  left: 2px;
+  font-size: 10.5px;
+  color: #f87171;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.btn-pano-create-gradient {
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  color: #ffffff;
+  font-size: 12.5px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-pano-create-gradient:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #4338ca 100%);
+  transform: translateY(-1px);
+}
+
+.btn-pano-cancel-outline {
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #94a3b8;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-pano-cancel-outline:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+}/* 📋 Pano Başlığı & Gelişmiş Edit Modu Tasarımı */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.project-title-view-mode {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.project-title-view-mode:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.project-title-view-mode h1 {
+  font-size: 26px !important;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.4px;
+}
+
+.project-edit-icon {
+  opacity: 0.25;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.project-title-view-mode:hover .project-edit-icon {
+  opacity: 1;
+  color: #38bdf8;
+  transform: scale(1.05);
+}
+
+.project-title-edit-mode {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-title-edit-mode input {
+  width: 260px;
+  max-width: 280px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1.5px solid #3b82f6;
+  background: #152033;
+  color: #fff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.btn-edit-save-green {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #10b981;
+  border: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(16, 185, 129, 0.4);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.btn-edit-save-green:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+.btn-edit-cancel-outline {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.btn-edit-cancel-outline:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+/* 📋 Kart Detay / Düzenleme Modalı Gelişmiş Tasarım Sistemi */
+.task-edit-modal-card {
+  width: 100%;
+  max-width: 640px !important;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background: #0e1626 !important;
+  border: 1px solid #1e293b !important;
+  border-radius: 20px !important;
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9) !important;
+  color: #f8fafc !important;
+}
+
+.task-edit-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.task-edit-modal-header h3 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 17px;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.task-edit-modal-body {
+  padding: 20px 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.form-group-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group-block label {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.form-row-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.task-edit-modal-body input[type="text"],
+.task-edit-modal-body input[type="date"],
+.task-edit-modal-body select,
+.task-edit-modal-body textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background: #152033;
+  border: 1.5px solid #233147;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.task-edit-modal-body textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.task-edit-modal-body input:focus,
+.task-edit-modal-body select:focus,
+.task-edit-modal-body textarea:focus {
+  border-color: #2563eb;
+  background: #17243a;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.task-edit-footer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0b1220;
+}
+
+.btn-modal-cancel-custom {
+  flex: 1;
+  height: 44px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: #94a3b8;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-modal-cancel-custom:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.btn-modal-save-gradient {
+  flex: 1.5;
+  height: 44px;
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn-modal-save-gradient:hover:not(:disabled) {
+  background: linear-gradient(135deg, #1d4ed8 0%, #4338ca 100%);
+  transform: translateY(-1px);
+}
+
+.btn-modal-save-gradient:disabled {
+  background: #334155;
+  color: #64748b;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* 💬 Yorumlar Balon Tasarımı */
+.comment-bubble-item {
+  background: var(--hover-bg, #152033);
+  border: 1px solid var(--border-color, #1e293b);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.comment-bubble-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment-author-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comment-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 📋 Kart Düzenleme Modalı İnce Ayarlar & Custom Scrollbar */
+.task-edit-modal-card {
+  scrollbar-width: thin;
+  scrollbar-color: #334155 #0e1626;
+}
+
+.task-edit-modal-card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.task-edit-modal-card::-webkit-scrollbar-track {
+  background: #0e1626;
+  border-radius: 8px;
+}
+
+.task-edit-modal-card::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 8px;
+}
+
+.task-edit-modal-card::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+.task-edit-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.task-edit-modal-header h3 {
+  margin: 0 auto;
+  font-size: 17px;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-modal-close-absolute {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-modal-close-absolute:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+}
+
+/* 🔵 Modern Secondary Butonlar (+ Ekle & Gönder) */
+.btn-secondary-action {
+  height: 38px;
+  padding: 0 16px;
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 10px;
+  color: #38bdf8;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-secondary-action:hover {
+  background: rgba(37, 99, 235, 0.28);
+  border-color: rgba(56, 189, 248, 0.6);
+  color: #ffffff;
+}
+
+/* 🎨 Değişiklik Yapıldığında Aktifleşen Kaydet Butonu */
+.btn-modal-save-gradient.active-changes {
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%) !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4) !important;
+}
+
+.btn-modal-save-gradient.active-changes:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #4338ca 100%) !important;
+  transform: translateY(-1px);
+}/* 📋 Checklist Mavi-Mor Gradient Progress Bar */
+.checklist-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb 0%, #8b5cf6 100%);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Yorum Silme Yetki Kontrolü */
+.comment-delete-btn {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.comment-delete-btn:hover {
+  color: #f87171;
+}/* 🃏 Kanban Kartı Yenilenmiş Kompakt Tasarım Sistemi */
+.task-card {
+  background: #152033;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.task-card:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Kopyala ve Sil Butonları (Normalde Soluk, Hover'da Belirgin) */
+.task-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  opacity: 0.25;
+  transition: opacity 0.2s ease;
+}
+
+.task-card:hover .task-card-actions {
+  opacity: 1;
+}
+
+.task-card-actions button {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 2px;
+  transition: color 0.2s ease;
+}
+
+.task-card-actions button:hover {
+  color: #f8fafc;
+}
+
+/* Başlık Sol Hizalama */
+.task-card h4 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0;
+  text-align: left;
+  line-height: 1.35;
+}
+
+/* Kompakt Alt Bilgi Satırı */
+.task-card-footer-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2px;
+  font-size: 11px;
+  color: #94a3b8;
+  gap: 6px;
+}
+
+.task-card-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task-compact-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.task-compact-date.overdue {
+  color: #f87171;
+}
+
+.task-compact-date.soon {
+  color: #fbbf24;
+}
+
+.task-compact-assignee {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.task-compact-comments {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #64748b;
+  margin-left: auto;
+}/* 🃏 Kanban Kartı Son Modern Hiyerarşi Revizyonu */
+.task-card {
+  background: #152033;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 12px;
+  cursor: grab;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.task-card:active {
+  cursor: grabbing;
+}
+
+.task-card:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Üst Kısım: Başlık Sol, İkonlar Sağ Üstte Soluk */
+.task-card-top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.task-card h4 {
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  color: #f8fafc;
+  margin: 0;
+  text-align: left;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+  flex: 1;
+}
+
+.task-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  opacity: 0.25;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.task-card:hover .task-card-actions {
+  opacity: 1;
+}
+
+.task-card-actions button {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 2px;
+  transition: color 0.2s ease;
+}
+
+.task-card-actions button:hover {
+  color: #f8fafc;
+}
+
+/* Kompakt Alt Bilgi Satırı */
+.task-card-footer-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #94a3b8;
+  gap: 6px;
+}
+
+.task-card-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task-compact-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.task-compact-date.overdue {
+  color: #f87171;
+  font-weight: 700;
+}
+
+.task-compact-date.soon {
+  color: #fbbf24;
+}
+
+.task-compact-assignee {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.task-compact-comments {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #64748b;
+  margin-left: auto;
+}
+/* 🃏 Kanban Kartı Hiyerarşi & Kompakt Sıkıştırma Revizyonu */
+.task-card {
+  background: #152033;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: grab;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.task-card:active {
+  cursor: grabbing;
+}
+
+.task-card:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Üst Satır: Başlık (Sol), Öncelik ve İkonlar (Sağ) */
+.task-card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.task-card h4 {
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  color: #f8fafc;
+  margin: 0;
+  text-align: left;
+  line-height: 1.25;
+  letter-spacing: -0.3px;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.task-card-right-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* Öncelik Rozeti (Sağ üstte ikonlardan önce) */
+.priority-tag-compact {
+  font-size: 9.5px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 4px;
+  letter-spacing: 0.4px;
+}
+
+.priority-tag-compact.low { background: rgba(59, 130, 246, 0.18); color: #60a5fa; }
+.priority-tag-compact.medium { background: rgba(245, 158, 11, 0.18); color: #fbbf24; }
+.priority-tag-compact.high { background: rgba(239, 68, 68, 0.18); color: #f87171; }
+
+.task-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  opacity: 0.25;
+  transition: opacity 0.2s ease;
+}
+
+.task-card:hover .task-card-actions {
+  opacity: 1;
+}
+
+.task-card-actions button {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 2px;
+  transition: color 0.2s ease;
+}
+
+.task-card-actions button:hover {
+  color: #f8fafc;
+}
+
+/* Kompakt Alt Bilgi Satırı */
+.task-card-footer-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2px;
+  font-size: 11px;
+  color: #94a3b8;
+  gap: 6px;
+}
+
+.task-card-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task-compact-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.task-compact-date.overdue {
+  color: #f87171;
+  font-weight: 700;
+}
+
+.task-compact-date.soon {
+  color: #fbbf24;
+}
+
+.task-compact-assignee {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.task-compact-comments {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #64748b;
+  margin-left: auto;
+}/* 🃏 Kanban Kartı Son UI / UX Detay Revizyonu */
+.priority-tag-compact {
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  padding: 1.5px 6px !important;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+}
+
+.priority-tag-compact.low { background: rgba(59, 130, 246, 0.18); color: #60a5fa; }
+.priority-tag-compact.medium { background: rgba(245, 158, 11, 0.18); color: #fbbf24; }
+.priority-tag-compact.high { background: rgba(239, 68, 68, 0.18); color: #f87171; }
+
+.task-card-footer-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2px;
+  font-size: 11px;
+  color: #94a3b8;
+  gap: 8px;
+  padding-right: 2px; /* Sağ ikonlarla tam hizalama için iç boşluk */
+}
+
+.task-card-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.task-compact-assignee {
+  color: #38bdf8;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 110px;
+}
+
+.task-compact-comments {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #64748b;
+  flex-shrink: 0;
+}
+/* 🎛️ Yenilenmiş Kompakt Toolbar & Filtreler Popover & Üç Nokta Menü */
+.toolbar-modern {
+  display: flex;
+  align-items: center;
+  padding: 0 24px 16px;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.toolbar-right-group {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Filtreler Ana Butonu */
+.btn-filters-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 16px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: #f8fafc;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+
+.btn-filters-toggle:hover {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+}
+
+.filters-count-badge {
+  background: #2563eb;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 10px;
+}
+
+/* Filtreler Popover Penceresi */
+.filters-popover-dropdown {
+  position: absolute;
+  top: 52px;
+  left: 280px;
+  width: 300px;
+  background: #0e1626;
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 9999;
+  text-align: left;
+}
+
+.filter-popover-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-popover-group label {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.filter-popover-group select {
+  width: 100%;
+  height: 38px;
+  padding: 0 10px;
+  background: #152033;
+  border: 1.5px solid #233147;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 12.5px;
+  outline: none;
+}
+
+.filter-popover-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-filter-clear {
+  flex: 1;
+  height: 36px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-filter-clear:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.btn-filter-apply {
+  flex: 1.5;
+  height: 36px;
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+/* ⋮ Üç Nokta Pano Menüsü */
+.board-options-menu-wrap {
+  position: relative;
+}
+
+.btn-three-dots-menu {
+  width: 38px;
+  height: 38px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-three-dots-menu:hover {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  color: #38bdf8;
+}
+
+.board-options-dropdown {
+  position: absolute;
+  top: 46px;
+  right: 0;
+  width: 200px;
+  background: #0e1626;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 9999;
+}
+
+.board-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 9px 12px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #cbd5e1;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.board-dropdown-item:hover {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+}
+/* 📋 Pano Başlığı: Rozet Kaldırıldı, Sadeleşti */
+.trello-header-custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px 6px;
+  gap: 20px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 🎛️ Yenilenmiş Toolbar & Sağ Buton Grubu */
+.toolbar-modern {
+  display: flex;
+  align-items: center;
+  padding: 10px 24px 14px;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.toolbar-right-group {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 📊 Yeni Yatay Genel İlerleme Satırı */
+.board-progress-bar-section {
+  padding: 0 24px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.board-progress-line-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.board-progress-line-text {
+  color: #38bdf8;
+  font-weight: 800;
+}
+
+.board-progress-line-bg {
+  width: 100%;
+  height: 5px;
+  background: #1e293b;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.board-progress-line-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8 0%, #2563eb 50%, #8b5cf6 100%);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+/* 📐 Spacing & Denge Optimizasyonları */
+.trello-header-custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 24px 2px !important; /* Başlık alt boşluğu daraltıldı */
+}
+
+.toolbar-modern {
+  display: flex;
+  align-items: center;
+  padding: 6px 24px 12px !important; /* Toolbar üst/alt boşlukları dengelendi */
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* 📊 Kompakt ve Sınırlı Genişlikteki İlerleme Alanı */
+.board-progress-bar-section {
+  padding: 0 24px 16px !important;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  max-width: 1040px; /* Ekranı uçtan uca kaplamaması için sınırlandırıldı */
+  margin: 0 auto;    /* Ortalandı */
+}
+
+.board-progress-line-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.board-progress-line-text {
+  color: #38bdf8;
+  font-weight: 800;
+}
+
+.board-progress-line-bg {
+  width: 100%;
+  height: 5px;
+  background: #1e293b;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.board-progress-line-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8 0%, #2563eb 50%, #8b5cf6 100%);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Sütunlar ile İlerleme Alanı Arasındaki Görsel Ayrım (18px) */
+.board-scroll-area {
+  padding-top: 4px !important;
+}
+/* 📐 Üst Alan ve Kompakt Sağ İlerleme Grubu Optimizasyonları */
+.trello-header-custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 24px 2px !important;
+}
+
+.toolbar-modern {
+  display: flex;
+  align-items: center;
+  padding: 6px 24px 10px !important;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: flex-start; /* Sağ blok dikey hizalaması için esneklik */
+}
+
+/* Sağ Taraf Ana Kontrol Grubu (Butonlar + Kompakt İlerleme) */
+.toolbar-right-container {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.toolbar-right-top-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Sağ Üst Kompakt Genel İlerleme Kartı (~300px) */
+.compact-progress-widget {
+  width: 300px;
+  max-width: 100%;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 8px 12px;
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.compact-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.compact-progress-text {
+  color: #38bdf8;
+  font-weight: 800;
+}
+
+.compact-progress-bar-bg {
+  width: 100%;
+  height: 4px;
+  background: #1e293b;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.compact-progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8 0%, #2563eb 50%, #8b5cf6 100%);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Eski dev ilerleme alanı DOM'dan kaldırıldığı için bu sınıf güncellendi */
+.board-progress-bar-section {
+  display: none !important;
+}
+
+.board-scroll-area {
+  padding-top: 8px !important;
+}
+/* 📐 En Son Toolbar & Kompakt Sağ İlerleme Hizalama Optimizasyonları */
+.trello-header-custom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 24px 2px !important;
+}
+
+.toolbar-modern {
+  display: flex;
+  align-items: center;
+  padding: 6px 24px 12px !important;
+  gap: 10px !important;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.toolbar-right-container {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Sağ Taraftaki Kompakt Genel İlerleme Widget'ı (~300px) */
+.compact-progress-widget {
+  width: 300px;
+  max-width: 100%;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 8px 12px;
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.compact-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.compact-progress-text {
+  color: #38bdf8;
+  font-weight: 800;
+}
+
+.compact-progress-bar-bg {
+  width: 100%;
+  height: 4px;
+  background: #1e293b;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.compact-progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8 0%, #2563eb 50%, #8b5cf6 100%);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.board-scroll-area {
+  padding-top: 12px !important; /* Toolbar ile Kanban sütunları arası ideal 20-24px boşluk */
+}
+/* ======================================================== */
+/* PANOVIO - TOOLBAR SON DÜZEN                               */
+/* Büyük "Yeni Görev Kartı Ekle" kaldırıldı.               */
+/* ⋮ menüsü sol gruba, Genel İlerleme sağa alındı.          */
+/* ======================================================== */
+
+.toolbar-modern {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 18px !important;
+  flex-wrap: nowrap !important;
+  padding: 8px 24px 14px !important;
+  position: relative;
+}
+
+.toolbar-left-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.filters-menu-wrap {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto;
+}
+
+/* Üç nokta artık Bana Ait Görevler'in hemen yanında. */
+.toolbar-left-group .board-options-menu-wrap {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+/* Menü sol tarafta açıldığı için sağa taşmak yerine butondan sola hizalanır. */
+.board-options-dropdown-left {
+  left: 0 !important;
+  right: auto !important;
+  top: 46px !important;
+  min-width: 210px;
+}
+
+/* Genel ilerleme tek başına sağ uçta. */
+.toolbar-progress-widget {
+  margin-left: auto;
+  width: 280px !important;
+  min-width: 240px;
+  max-width: 280px !important;
+  flex: 0 0 280px;
+  padding: 8px 12px !important;
+  border-radius: 11px !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
+}
+
+.toolbar-progress-widget .compact-progress-header {
+  font-size: 11px;
+  margin-bottom: 1px;
+}
+
+.toolbar-progress-widget .compact-progress-bar-bg {
+  height: 4px;
+}
+
+/* Eski sağ konteyner artık yeni toolbar'da kullanılmıyor. */
+.toolbar-right-container,
+.toolbar-right-top-row {
+  margin-left: 0;
+}
+
+/* Sütunların toolbar'a fazla yaklaşmasını engeller. */
+.board-scroll-area {
+  padding-top: 8px !important;
+}
+
+/* Tablet: ilerleme biraz küçülür, toolbar yine dengeli kalır. */
+@media (max-width: 1050px) {
+  .toolbar-modern {
+    flex-wrap: wrap !important;
+    align-items: center !important;
+  }
+
+  .toolbar-left-group {
+    flex-wrap: wrap;
+  }
+
+  .toolbar-progress-widget {
+    width: 260px !important;
+    min-width: 220px;
+    max-width: 260px !important;
+    flex-basis: 260px;
+  }
+}
+
+/* Mobil/dar ekran: ilerleme ikinci satıra geçer ve alanı doldurur. */
+@media (max-width: 760px) {
+  .toolbar-modern {
+    padding: 8px 14px 12px !important;
+    gap: 10px !important;
+  }
+
+  .toolbar-left-group {
+    width: 100%;
+    flex: 1 1 100%;
+    gap: 8px;
+  }
+
+  .toolbar-left-group .search-box {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .toolbar-left-group .search-box input {
+    width: 100%;
+  }
+
+  .toolbar-progress-widget {
+    margin-left: 0;
+    width: 100% !important;
+    min-width: 0;
+    max-width: none !important;
+    flex: 1 1 100%;
+  }
+
+  .board-options-dropdown-left {
+    left: auto !important;
+    right: 0 !important;
+  }
+}
+
+/* =========================================================
+   PANOVIO - GÜVENLİ SON UI DÜZELTMELERİ
+   Bu bölüm append-only override'dır:
+   mevcut Kanban, drag/drop ve yerleşim kuralları korunur.
+   ========================================================= */
+
+/* ---------- Katman sırası: toolbar menüleri sütunların üstünde ---------- */
+.user-bar {
+  position: relative !important;
+  z-index: 5000 !important;
+  overflow: visible !important;
+}
+
+.trello-header-custom {
+  position: relative !important;
+  z-index: 3000 !important;
+}
+
+.toolbar-modern {
+  position: relative !important;
+  z-index: 4000 !important;
+  overflow: visible !important;
+}
+
+.toolbar-left-group,
+.filters-menu-wrap,
+.board-options-menu-wrap {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+.filters-menu-wrap,
+.board-options-menu-wrap {
+  z-index: 4100 !important;
+}
+
+.filters-popover-dropdown,
+.board-options-dropdown,
+.board-options-dropdown-left {
+  z-index: 50000 !important;
+  background: #0e1626 !important;
+  border: 1px solid #26354d !important;
+  box-shadow: 0 22px 55px rgba(0,0,0,.55) !important;
+}
+
+.filters-popover-dropdown {
+  top: 46px !important;
+  left: 0 !important;
+  right: auto !important;
+}
+
+.board-options-dropdown-left {
+  top: 46px !important;
+  left: 0 !important;
+  right: auto !important;
+}
+
+.board-scroll-area {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.board,
+.column {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Profil dropdown: Panovio görünümü ---------- */
+.user-bar-actions {
+  position: relative !important;
+  z-index: 5100 !important;
+  overflow: visible !important;
+}
+
+.profile-dropdown-menu {
+  position: absolute !important;
+  top: calc(100% + 10px) !important;
+  right: 0 !important;
+  left: auto !important;
+  width: min(360px, calc(100vw - 28px)) !important;
+  max-height: calc(100vh - 90px) !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding: 20px !important;
+  gap: 14px !important;
+  border-radius: 18px !important;
+  background: var(--panel-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-main) !important;
+  box-shadow: 0 26px 65px rgba(0,0,0,.48) !important;
+  z-index: 60000 !important;
+  opacity: 1 !important;
+  backdrop-filter: none !important;
+}
+
+.profile-dropdown-menu .dropdown-user-header {
+  padding: 0 0 15px !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.profile-dropdown-menu .dropdown-user-header h4 {
+  color: var(--text-main) !important;
+}
+
+.profile-dropdown-menu .dropdown-user-header span {
+  color: var(--text-muted) !important;
+}
+
+/* Inline gri stilleri Panovio butonlarına çevirir */
+.profile-dropdown-menu button {
+  min-height: 42px !important;
+  border-radius: 11px !important;
+  border: 1px solid rgba(56,189,248,.22) !important;
+  background: rgba(37,99,235,.12) !important;
+  color: #38bdf8 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: .18s ease !important;
+}
+
+.profile-dropdown-menu button:hover {
+  background: rgba(37,99,235,.22) !important;
+  border-color: rgba(56,189,248,.5) !important;
+  color: #7dd3fc !important;
+  transform: translateY(-1px);
+}
+
+.profile-dropdown-menu button[style*="background: #fee2e2"],
+.profile-dropdown-menu button[style*="background: rgb(254, 226, 226)"] {
+  background: rgba(239,68,68,.12) !important;
+  border-color: rgba(248,113,113,.28) !important;
+  color: #f87171 !important;
+}
+
+.profile-dropdown-menu button[style*="background: #fee2e2"]:hover,
+.profile-dropdown-menu button[style*="background: rgb(254, 226, 226)"]:hover {
+  background: rgba(239,68,68,.2) !important;
+  border-color: rgba(248,113,113,.48) !important;
+  color: #fca5a5 !important;
+}
+
+.profile-dropdown-menu .project-progress-widget {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  background: var(--hover-bg) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+/* ---------- Sütun altındaki "Bir kart ekle" ---------- */
+.btn-column-add-task {
+  width: calc(100% - 20px) !important;
+  margin: 0 10px 10px !important;
+  min-height: 40px !important;
+  padding: 9px 12px !important;
+  border: 1px dashed rgba(56,189,248,.24) !important;
+  border-radius: 10px !important;
+  background: rgba(37,99,235,.07) !important;
+  color: #94a3b8 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  transition: .18s ease !important;
+}
+
+.btn-column-add-task:hover {
+  background: rgba(37,99,235,.14) !important;
+  border-color: rgba(56,189,248,.48) !important;
+  color: #38bdf8 !important;
+}
+
+/* ---------- Yeni görev oluşturma modalı ----------
+   Genel modal yapısını modernleştirir; task-edit modalın özel
+   kuralları daha spesifik olduğu için korunur.
+*/
+.modal-backdrop {
+  z-index: 100000 !important;
+  padding: 20px !important;
+  background: rgba(2,6,23,.72) !important;
+  backdrop-filter: blur(7px) !important;
+}
+
+.modal-card:not(.task-edit-modal-card) {
+  width: min(560px, 100%) !important;
+  max-width: 560px !important;
+  max-height: calc(100vh - 40px) !important;
+  overflow-y: auto !important;
+  padding: 22px 24px !important;
+  background: var(--panel-bg) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 28px 70px rgba(0,0,0,.5) !important;
+  text-align: left !important;
+}
+
+.modal-card:not(.task-edit-modal-card) h2,
+.modal-card:not(.task-edit-modal-card) h3 {
+  color: var(--text-main) !important;
+}
+
+.modal-card:not(.task-edit-modal-card) label {
+  color: var(--text-muted) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+}
+
+.modal-card:not(.task-edit-modal-card) input,
+.modal-card:not(.task-edit-modal-card) textarea,
+.modal-card:not(.task-edit-modal-card) select {
+  background: var(--hover-bg) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 10px !important;
+  outline: none !important;
+}
+
+.modal-card:not(.task-edit-modal-card) input:focus,
+.modal-card:not(.task-edit-modal-card) textarea:focus,
+.modal-card:not(.task-edit-modal-card) select:focus {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 0 3px rgba(56,189,248,.12) !important;
+}
+
+/* ---------- Gerçek açık tema ----------
+   Mevcut arka plan seçimini tamamen yok etmeden, açık temada
+   Panovio'nun yüzeylerini gerçekten aydınlatır.
+*/
+[data-theme='light'] {
+  --bg-main: #f4f7fb;
+  --panel-bg: #ffffff;
+  --text-main: #172033;
+  --text-muted: #64748b;
+  --border-color: #dbe4ef;
+  --hover-bg: #f1f5f9;
+}
+
+[data-theme='light'] body,
+[data-theme='light'] #root {
+  color: var(--text-main) !important;
+}
+
+[data-theme='light'] .user-bar {
+  background: rgba(255,255,255,.92) !important;
+  border-bottom-color: #dbe4ef !important;
+}
+
+[data-theme='light'] .profile-nav-pill,
+[data-theme='light'] .btn-header-action {
+  background: #ffffff !important;
+  border-color: #dbe4ef !important;
+  color: #172033 !important;
+}
+
+[data-theme='light'] .boards-bar {
+  background: rgba(255,255,255,.78) !important;
+  border-bottom-color: rgba(148,163,184,.25) !important;
+}
+
+[data-theme='light'] .board-tab {
+  background: rgba(255,255,255,.72) !important;
+  border-color: rgba(148,163,184,.32) !important;
+  color: #475569 !important;
+}
+
+[data-theme='light'] .board-tab.active {
+  background: #2563eb !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+[data-theme='light'] .header-left h1,
+[data-theme='light'] .project-title-view-mode h1 {
+  color: #f8fafc !important;
+}
+
+/* Board arka planı kullanıcı seçimi olduğu için korunur;
+   sütun/kart/toolbar yüzeyleri açıklaşır. */
+[data-theme='light'] .column {
+  background: rgba(255,255,255,.94) !important;
+  border-color: rgba(203,213,225,.9) !important;
+  box-shadow: 0 12px 30px rgba(15,23,42,.12) !important;
+}
+
+[data-theme='light'] .column-header {
+  border-bottom-color: #e2e8f0 !important;
+}
+
+[data-theme='light'] .col-title,
+[data-theme='light'] .column h3 {
+  color: #172033 !important;
+}
+
+[data-theme='light'] .badge {
+  background: #eaf0f7 !important;
+  color: #475569 !important;
+}
+
+[data-theme='light'] .task-card {
+  background: #ffffff !important;
+  border-color: #dbe4ef !important;
+  color: #172033 !important;
+  box-shadow: 0 4px 14px rgba(15,23,42,.08) !important;
+}
+
+[data-theme='light'] .task-card h4 {
+  color: #172033 !important;
+}
+
+[data-theme='light'] .task-card:hover {
+  border-color: rgba(37,99,235,.38) !important;
+}
+
+[data-theme='light'] .search-box,
+[data-theme='light'] .filter-box,
+[data-theme='light'] .btn-my-tasks-toggle,
+[data-theme='light'] .btn-filters-toggle,
+[data-theme='light'] .btn-three-dots-menu,
+[data-theme='light'] .compact-progress-widget,
+[data-theme='light'] .toolbar-progress-widget {
+  background: rgba(255,255,255,.94) !important;
+  border-color: #dbe4ef !important;
+  color: #475569 !important;
+  box-shadow: 0 4px 14px rgba(15,23,42,.07) !important;
+}
+
+[data-theme='light'] .search-box input,
+[data-theme='light'] .filter-box select {
+  color: #172033 !important;
+}
+
+[data-theme='light'] .compact-progress-header {
+  color: #64748b !important;
+}
+
+[data-theme='light'] .compact-progress-bar-bg {
+  background: #e2e8f0 !important;
+}
+
+[data-theme='light'] .filters-popover-dropdown,
+[data-theme='light'] .board-options-dropdown,
+[data-theme='light'] .board-options-dropdown-left {
+  background: #ffffff !important;
+  border-color: #dbe4ef !important;
+  color: #172033 !important;
+  box-shadow: 0 20px 50px rgba(15,23,42,.18) !important;
+}
+
+[data-theme='light'] .board-dropdown-item {
+  color: #475569 !important;
+}
+
+[data-theme='light'] .board-dropdown-item:hover {
+  color: #2563eb !important;
+  background: #eff6ff !important;
+}
+
+[data-theme='light'] .filter-popover-group label {
+  color: #64748b !important;
+}
+
+[data-theme='light'] .filter-popover-group select {
+  background: #f8fafc !important;
+  border-color: #dbe4ef !important;
+  color: #172033 !important;
+}
+
+[data-theme='light'] .profile-dropdown-menu {
+  background: #ffffff !important;
+  border-color: #dbe4ef !important;
+  color: #172033 !important;
+  box-shadow: 0 24px 60px rgba(15,23,42,.2) !important;
+}
+
+[data-theme='light'] .profile-dropdown-menu .dropdown-user-header h4 {
+  color: #172033 !important;
+}
+
+[data-theme='light'] .profile-dropdown-menu .dropdown-user-header span {
+  color: #64748b !important;
+}
+
+[data-theme='light'] .profile-dropdown-menu button {
+  background: #eff6ff !important;
+  border-color: #bfdbfe !important;
+  color: #2563eb !important;
+}
+
+[data-theme='light'] .profile-dropdown-menu button:hover {
+  background: #dbeafe !important;
+  border-color: #93c5fd !important;
+}
+
+[data-theme='light'] .profile-dropdown-menu .project-progress-widget {
+  background: #f8fafc !important;
+  border-color: #dbe4ef !important;
+}
+
+[data-theme='light'] .btn-column-add-task {
+  background: rgba(239,246,255,.8) !important;
+  border-color: #bfdbfe !important;
+  color: #64748b !important;
+}
+
+[data-theme='light'] .btn-column-add-task:hover {
+  background: #dbeafe !important;
+  border-color: #60a5fa !important;
+  color: #2563eb !important;
+}
+
+[data-theme='light'] .modal-card:not(.task-edit-modal-card) {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-color: #dbe4ef !important;
+}
+
+[data-theme='light'] .modal-card:not(.task-edit-modal-card) h2,
+[data-theme='light'] .modal-card:not(.task-edit-modal-card) h3 {
+  color: #172033 !important;
+}
+
+/* Koyu temada mevcut Panovio görünümünü kesinleştir */
+[data-theme='dark'] .profile-dropdown-menu {
+  background: #0e1626 !important;
+  border-color: #243247 !important;
+}
+
+[data-theme='dark'] .filters-popover-dropdown,
+[data-theme='dark'] .board-options-dropdown,
+[data-theme='dark'] .board-options-dropdown-left {
+  background: #0e1626 !important;
+  border-color: #26354d !important;
+}
+
+/* ---------- Mobil güvenlik ---------- */
+@media (max-width: 760px) {
+  .filters-popover-dropdown {
+    left: 0 !important;
+    right: auto !important;
+    width: min(300px, calc(100vw - 28px)) !important;
+  }
+
+  .board-options-dropdown-left {
+    left: 0 !important;
+    right: auto !important;
+  }
+
+  .profile-dropdown-menu {
+    position: fixed !important;
+    top: 72px !important;
+    left: 12px !important;
+    right: 12px !important;
+    width: auto !important;
+    max-height: calc(100vh - 88px) !important;
+  }
+}
+
+/* =========================================================
+   PANOVIO V2 - MODAL + TEMA + SCROLLBAR DÜZELTMELERİ
+   Önceki toolbar / Kanban / drag-drop düzenine dokunmaz.
+   ========================================================= */
+
+/* 1) YENİ GÖREV KARTI EKLE - düzenli form */
+.modal-card:not(.task-edit-modal-card) {
+  box-sizing: border-box !important;
+  width: min(620px, calc(100vw - 32px)) !important;
+  max-width: 620px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.modal-card:not(.task-edit-modal-card) > form {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  padding: 22px 26px 26px !important;
+  text-align: left !important;
+}
+
+.modal-card:not(.task-edit-modal-card) > form > h2,
+.modal-card:not(.task-edit-modal-card) > form > h3 {
+  grid-column: 1 / -1 !important;
+  margin: 0 0 4px !important;
+  font-size: 21px !important;
+  line-height: 1.3 !important;
+}
+
+.modal-card:not(.task-edit-modal-card) > form > label {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 7px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  color: var(--text-muted) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+}
+
+/* İlk iki alan: başlık ve açıklama */
+.modal-card:not(.task-edit-modal-card) > form > label:nth-of-type(1),
+.modal-card:not(.task-edit-modal-card) > form > label:nth-of-type(2) {
+  grid-column: 1 / -1 !important;
+}
+
+/* Sorumlu kişi satırı geniş olsun */
+.modal-card:not(.task-edit-modal-card) > form > label:has(select[name*="assign" i]),
+.modal-card:not(.task-edit-modal-card) > form > label:has(select[name*="respons" i]) {
+  grid-column: 1 / -1 !important;
+}
+
+.modal-card:not(.task-edit-modal-card) input,
+.modal-card:not(.task-edit-modal-card) select,
+.modal-card:not(.task-edit-modal-card) textarea {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  padding: 10px 12px !important;
+  border-radius: 10px !important;
+  font-size: 13px !important;
+}
+
+.modal-card:not(.task-edit-modal-card) textarea {
+  min-height: 92px !important;
+  resize: vertical !important;
+}
+
+.modal-card:not(.task-edit-modal-card) button[type="submit"] {
+  min-height: 44px !important;
+  padding: 0 20px !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  background: linear-gradient(135deg, #2563eb, #4f46e5) !important;
+  color: #fff !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  box-shadow: 0 7px 18px rgba(37,99,235,.25) !important;
+}
+
+.modal-card:not(.task-edit-modal-card) button[type="button"] {
+  min-height: 42px !important;
+  padding: 0 16px !important;
+  border-radius: 10px !important;
+  background: transparent !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-muted) !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+}
+
+/* Modal içindeki son aksiyon grubu tek satırda ve sağda */
+.modal-card:not(.task-edit-modal-card) > form > div:last-child {
+  grid-column: 1 / -1 !important;
+}
+
+/* 2) KARTI DÜZENLE - tema değişimini takip etsin */
+.task-edit-modal-card {
+  background: var(--panel-bg) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-color) !important;
+}
+
+.task-edit-modal-header,
+.task-edit-footer-actions {
+  background: var(--panel-bg) !important;
+  border-color: var(--border-color) !important;
+}
+
+.task-edit-modal-header h3,
+.task-edit-modal-body,
+.task-edit-modal-body strong {
+  color: var(--text-main) !important;
+}
+
+.task-edit-modal-body label,
+.task-edit-modal-body .form-group-block label {
+  color: var(--text-muted) !important;
+}
+
+.task-edit-modal-body input[type="text"],
+.task-edit-modal-body input[type="date"],
+.task-edit-modal-body select,
+.task-edit-modal-body textarea {
+  background: var(--hover-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-main) !important;
+}
+
+.task-edit-modal-body input:focus,
+.task-edit-modal-body select:focus,
+.task-edit-modal-body textarea:focus {
+  background: var(--hover-bg) !important;
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 0 3px rgba(56,189,248,.13) !important;
+}
+
+.task-edit-modal-body input::placeholder,
+.task-edit-modal-body textarea::placeholder {
+  color: var(--text-muted) !important;
+  opacity: .8 !important;
+}
+
+.task-edit-footer-actions .btn-modal-cancel-custom {
+  background: transparent !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-muted) !important;
+}
+
+/* Açık tema kart düzenleme modalı */
+[data-theme='light'] .task-edit-modal-card {
+  background: #ffffff !important;
+  border-color: #dbe4ef !important;
+  box-shadow: 0 28px 70px rgba(15,23,42,.20) !important;
+}
+
+[data-theme='light'] .task-edit-modal-header,
+[data-theme='light'] .task-edit-footer-actions {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+[data-theme='light'] .task-edit-modal-header h3 {
+  color: #172033 !important;
+}
+
+[data-theme='light'] .task-edit-modal-body {
+  color: #172033 !important;
+}
+
+[data-theme='light'] .task-edit-modal-body input[type="text"],
+[data-theme='light'] .task-edit-modal-body input[type="date"],
+[data-theme='light'] .task-edit-modal-body select,
+[data-theme='light'] .task-edit-modal-body textarea {
+  background: #f8fafc !important;
+  border-color: #dbe4ef !important;
+  color: #172033 !important;
+}
+
+[data-theme='light'] .task-edit-modal-body label,
+[data-theme='light'] .task-edit-modal-body .form-group-block label {
+  color: #64748b !important;
+}
+
+[data-theme='light'] .btn-modal-close-absolute {
+  color: #64748b !important;
+}
+
+[data-theme='light'] .btn-modal-close-absolute:hover {
+  background: #f1f5f9 !important;
+  color: #2563eb !important;
+}
+
+[data-theme='light'] .task-edit-footer-actions .btn-modal-cancel-custom {
+  background: #ffffff !important;
+  border-color: #dbe4ef !important;
+  color: #475569 !important;
+}
+
+/* 3) BANA ATANAN GÖREVLER + KART DÜZENLE SCROLLBAR */
+.my-tasks-panel,
+.my-tasks-list,
+.task-edit-modal-card,
+.task-edit-modal-body {
+  scrollbar-width: thin;
+  scrollbar-color: #475569 #172033;
+}
+
+.my-tasks-panel::-webkit-scrollbar,
+.my-tasks-list::-webkit-scrollbar,
+.task-edit-modal-card::-webkit-scrollbar,
+.task-edit-modal-body::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+.my-tasks-panel::-webkit-scrollbar-track,
+.my-tasks-list::-webkit-scrollbar-track,
+.task-edit-modal-card::-webkit-scrollbar-track,
+.task-edit-modal-body::-webkit-scrollbar-track {
+  background: #172033 !important;
+  border-radius: 999px !important;
+}
+
+.my-tasks-panel::-webkit-scrollbar-thumb,
+.my-tasks-list::-webkit-scrollbar-thumb,
+.task-edit-modal-card::-webkit-scrollbar-thumb,
+.task-edit-modal-body::-webkit-scrollbar-thumb {
+  background: #475569 !important;
+  border-radius: 999px !important;
+  border: 2px solid #172033 !important;
+}
+
+[data-theme='light'] .my-tasks-panel,
+[data-theme='light'] .my-tasks-list,
+[data-theme='light'] .task-edit-modal-card,
+[data-theme='light'] .task-edit-modal-body {
+  scrollbar-color: #94a3b8 #eef2f7 !important;
+}
+
+[data-theme='light'] .my-tasks-panel::-webkit-scrollbar-track,
+[data-theme='light'] .my-tasks-list::-webkit-scrollbar-track,
+[data-theme='light'] .task-edit-modal-card::-webkit-scrollbar-track,
+[data-theme='light'] .task-edit-modal-body::-webkit-scrollbar-track {
+  background: #eef2f7 !important;
+}
+
+[data-theme='light'] .my-tasks-panel::-webkit-scrollbar-thumb,
+[data-theme='light'] .my-tasks-list::-webkit-scrollbar-thumb,
+[data-theme='light'] .task-edit-modal-card::-webkit-scrollbar-thumb,
+[data-theme='light'] .task-edit-modal-body::-webkit-scrollbar-thumb {
+  background: #94a3b8 !important;
+  border-color: #eef2f7 !important;
+}
+
+/* Muhtemel my-tasks sınıf varyasyonları için tema yüzeyi */
+[data-theme='light'] .my-tasks-modal,
+[data-theme='light'] .assigned-tasks-modal,
+[data-theme='light'] .assigned-tasks-panel {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-color: #dbe4ef !important;
+}
+
+/* 4) Açık temada task edit içindeki alt bileşenler */
+[data-theme='light'] .comment-bubble-item {
+  background: #f8fafc !important;
+  border-color: #dbe4ef !important;
+  color: #172033 !important;
+}
+
+[data-theme='light'] .btn-secondary-action {
+  background: #eff6ff !important;
+  border-color: #bfdbfe !important;
+  color: #2563eb !important;
+}
+
+/* 5) Küçük ekranlarda yeni görev formu tek sütun */
+@media (max-width: 640px) {
+  .modal-card:not(.task-edit-modal-card) > form {
+    grid-template-columns: 1fr !important;
+    padding: 20px !important;
+  }
+
+  .modal-card:not(.task-edit-modal-card) > form > * {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+/* =========================================================
+   PANOVIO V3 - YENİ GÖREV MODAL BAŞLIĞI + TEHLİKELİ BUTON
+   Önceki tüm düzenlemeler korunur.
+   ========================================================= */
+
+/* Yeni Görev Kartı Ekle: başlık ve X birbirinden ayrılır */
+.modal-card:not(.task-edit-modal-card) {
+  position: relative !important;
+}
+
+/* Modalın doğrudan içindeki kapatma butonunu sağ üste sabitle */
+.modal-card:not(.task-edit-modal-card) > button:first-of-type,
+.modal-card:not(.task-edit-modal-card) > form > button:first-of-type {
+  position: absolute !important;
+  top: 18px !important;
+  right: 20px !important;
+  left: auto !important;
+  width: 36px !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 10px !important;
+  background: transparent !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-muted) !important;
+  font-size: 23px !important;
+  line-height: 1 !important;
+  z-index: 20 !important;
+}
+
+.modal-card:not(.task-edit-modal-card) > button:first-of-type:hover,
+.modal-card:not(.task-edit-modal-card) > form > button:first-of-type:hover {
+  background: rgba(239,68,68,.10) !important;
+  border-color: rgba(248,113,113,.35) !important;
+  color: #f87171 !important;
+}
+
+/* Başlığın X butonuna girmemesi için sağ boşluk */
+.modal-card:not(.task-edit-modal-card) > h2,
+.modal-card:not(.task-edit-modal-card) > h3,
+.modal-card:not(.task-edit-modal-card) > form > h2,
+.modal-card:not(.task-edit-modal-card) > form > h3 {
+  padding-right: 54px !important;
+}
+
+/* Açık temada kapatma butonu */
+[data-theme='light'] .modal-card:not(.task-edit-modal-card) > button:first-of-type,
+[data-theme='light'] .modal-card:not(.task-edit-modal-card) > form > button:first-of-type {
+  background: #f8fafc !important;
+  border-color: #dbe4ef !important;
+  color: #64748b !important;
+}
+
+[data-theme='light'] .modal-card:not(.task-edit-modal-card) > button:first-of-type:hover,
+[data-theme='light'] .modal-card:not(.task-edit-modal-card) > form > button:first-of-type:hover {
+  background: #fef2f2 !important;
+  border-color: #fecaca !important;
+  color: #dc2626 !important;
+}
+
+/* =========================================================
+   HESABI KALICI OLARAK SİL - danger action
+   Mevcut profil formundaki silme aksiyonunu kırmızılaştırır.
+   ========================================================= */
+
+/* Hesap silme bölümünde kullanılan danger sınıf varyasyonları */
+.btn-danger,
+.btn-delete-account,
+.delete-account-btn,
+.account-delete-btn,
+.danger-button,
+.danger-btn {
+  background: rgba(239,68,68,.10) !important;
+  border: 1px solid rgba(248,113,113,.42) !important;
+  color: #f87171 !important;
+  border-radius: 10px !important;
+  font-weight: 700 !important;
+  transition: .18s ease !important;
+}
+
+.btn-danger:hover,
+.btn-delete-account:hover,
+.delete-account-btn:hover,
+.account-delete-btn:hover,
+.danger-button:hover,
+.danger-btn:hover {
+  background: #dc2626 !important;
+  border-color: #dc2626 !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 18px rgba(220,38,38,.22) !important;
+}
+
+/* Açık tema */
+[data-theme='light'] .btn-danger,
+[data-theme='light'] .btn-delete-account,
+[data-theme='light'] .delete-account-btn,
+[data-theme='light'] .account-delete-btn,
+[data-theme='light'] .danger-button,
+[data-theme='light'] .danger-btn {
+  background: #fef2f2 !important;
+  border-color: #fecaca !important;
+  color: #dc2626 !important;
+}
+
+[data-theme='light'] .btn-danger:hover,
+[data-theme='light'] .btn-delete-account:hover,
+[data-theme='light'] .delete-account-btn:hover,
+[data-theme='light'] .account-delete-btn:hover,
+[data-theme='light'] .danger-button:hover,
+[data-theme='light'] .danger-btn:hover {
+  background: #dc2626 !important;
+  border-color: #dc2626 !important;
+  color: #ffffff !important;
+}
+
+/* =========================================================
+   PANOVIO V4 - GERÇEK DOM SINIFLARINA GÖRE KESİN DÜZELTME
+   ========================================================= */
+
+/* Yeni Görev modalının gerçek yapısı:
+   .modal-card > .modal-header > h3 + .btn-close
+*/
+.modal-card .modal-header {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  min-height: 68px !important;
+  padding: 18px 64px 14px 26px !important;
+  box-sizing: border-box !important;
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.modal-card .modal-header h3 {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--text-main) !important;
+  font-size: 21px !important;
+  font-weight: 800 !important;
+  line-height: 1.25 !important;
+}
+
+.modal-card .modal-header .btn-close {
+  position: absolute !important;
+  top: 16px !important;
+  right: 20px !important;
+  left: auto !important;
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 10px !important;
+  color: var(--text-muted) !important;
+  cursor: pointer !important;
+  z-index: 50 !important;
+}
+
+.modal-card .modal-header .btn-close:hover {
+  background: rgba(239,68,68,.10) !important;
+  border-color: rgba(248,113,113,.42) !important;
+  color: #f87171 !important;
+}
+
+/* Açık tema başlık ve X */
+[data-theme='light'] .modal-card .modal-header {
+  border-bottom-color: #e2e8f0 !important;
+}
+
+[data-theme='light'] .modal-card .modal-header h3 {
+  color: #172033 !important;
+}
+
+[data-theme='light'] .modal-card .modal-header .btn-close {
+  background: #f8fafc !important;
+  border-color: #dbe4ef !important;
+  color: #64748b !important;
+}
+
+[data-theme='light'] .modal-card .modal-header .btn-close:hover {
+  background: #fef2f2 !important;
+  border-color: #fecaca !important;
+  color: #dc2626 !important;
+}
+
+/* Form header'dan sonra başlasın; eski ilk-button seçicilerinin etkisini sıfırla */
+.modal-card .modal-form {
+  box-sizing: border-box !important;
+}
+
+/* Profil dropdown içindeki hesap silme butonu:
+   daha spesifik selector ile mavi genel profil butonunu ezer.
+*/
+.profile-dropdown-menu .btn-delete-account {
+  background: rgba(239,68,68,.12) !important;
+  border: 1px solid rgba(248,113,113,.48) !important;
+  color: #f87171 !important;
+  min-height: 42px !important;
+  padding: 0 14px !important;
+  border-radius: 10px !important;
+  font-weight: 800 !important;
+  box-shadow: none !important;
+}
+
+.profile-dropdown-menu .btn-delete-account:hover {
+  background: #dc2626 !important;
+  border-color: #dc2626 !important;
+  color: #ffffff !important;
+  box-shadow: 0 7px 18px rgba(220,38,38,.22) !important;
+  transform: translateY(-1px) !important;
+}
+
+[data-theme='light'] .profile-dropdown-menu .btn-delete-account {
+  background: #fef2f2 !important;
+  border-color: #fecaca !important;
+  color: #dc2626 !important;
+}
+
+[data-theme='light'] .profile-dropdown-menu .btn-delete-account:hover {
+  background: #dc2626 !important;
+  border-color: #dc2626 !important;
+  color: #ffffff !important;
+}
+
+/* Mobilde de başlık ile X ayrık kalır */
+@media (max-width: 640px) {
+  .modal-card .modal-header {
+    padding: 16px 58px 14px 20px !important;
+  }
+
+  .modal-card .modal-header h3 {
+    font-size: 18px !important;
+  }
+
+  .modal-card .modal-header .btn-close {
+    top: 14px !important;
+    right: 16px !important;
+  }
+}
+
+/* =========================================================
+   PANOVIO V5 - SADECE EKİP SOHBETİ
+   V4'teki modal/profil/toolbar/Kanban düzeltmelerinin üstüne eklenir.
+   ========================================================= */
+
+.board-chat-dock-wrapper .board-chat-dock-panel {
+  background: var(--panel-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-main) !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-header {
+  background: var(--panel-bg) !important;
+  border-bottom-color: var(--border-color) !important;
+  color: var(--text-main) !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-title-wrap,
+.board-chat-dock-wrapper .chat-dock-title-wrap strong,
+.board-chat-dock-wrapper .chat-dock-header strong {
+  color: var(--text-main) !important;
+}
+
+.board-chat-dock-wrapper .btn-dock-close {
+  color: var(--text-muted) !important;
+}
+
+.board-chat-dock-wrapper .btn-dock-close:hover {
+  background: var(--hover-bg) !important;
+  color: var(--text-main) !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-search {
+  background: var(--panel-bg) !important;
+  border-bottom-color: var(--border-color) !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-search input {
+  background: var(--hover-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-main) !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-search input::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 1 !important;
+}
+
+.board-chat-dock-wrapper .search-dock-icon {
+  color: var(--text-muted) !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-list {
+  background: var(--panel-bg) !important;
+  color: var(--text-main) !important;
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-muted) transparent;
+}
+
+.board-chat-dock-wrapper .chat-dock-user-item {
+  background: transparent !important;
+  color: var(--text-main) !important;
+  border: 1px solid transparent !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-user-item strong {
+  color: var(--text-main) !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-user-item small {
+  color: var(--text-muted) !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-user-item:hover {
+  background: var(--hover-bg) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-color) !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-user-item:hover strong {
+  color: var(--text-main) !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-user-item:hover small {
+  color: var(--text-muted) !important;
+}
+
+.board-chat-dock-wrapper .avatar-circle-dock {
+  background: linear-gradient(135deg, #38bdf8, #2563eb) !important;
+  color: #fff !important;
+}
+
+.board-chat-dock-wrapper .board-chat-dock-panel form {
+  background: var(--panel-bg) !important;
+  border-top-color: var(--border-color) !important;
+}
+
+.board-chat-dock-wrapper .board-chat-dock-panel form input {
+  background: var(--hover-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-main) !important;
+}
+
+.board-chat-dock-wrapper .board-chat-dock-panel form input::placeholder {
+  color: var(--text-muted) !important;
+}
+
+/* Açık tema: sohbet gerçekten açık yüzeye geçer. */
+[data-theme='light'] .board-chat-dock-wrapper .board-chat-dock-panel,
+[data-theme='light'] .board-chat-dock-wrapper .chat-dock-header,
+[data-theme='light'] .board-chat-dock-wrapper .chat-dock-search,
+[data-theme='light'] .board-chat-dock-wrapper .chat-dock-list,
+[data-theme='light'] .board-chat-dock-wrapper .board-chat-dock-panel form {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-color: #dbe4ef !important;
+}
+
+[data-theme='light'] .board-chat-dock-wrapper .chat-dock-search input,
+[data-theme='light'] .board-chat-dock-wrapper .board-chat-dock-panel form input {
+  background: #f8fafc !important;
+  color: #172033 !important;
+  border-color: #dbe4ef !important;
+}
+
+[data-theme='light'] .board-chat-dock-wrapper .chat-dock-user-item,
+[data-theme='light'] .board-chat-dock-wrapper .chat-dock-user-item strong {
+  color: #172033 !important;
+}
+
+[data-theme='light'] .board-chat-dock-wrapper .chat-dock-user-item small {
+  color: #64748b !important;
+}
+
+[data-theme='light'] .board-chat-dock-wrapper .chat-dock-user-item:hover {
+  background: #eef4fb !important;
+  border-color: #d7e2ef !important;
+  color: #172033 !important;
+}
+
+[data-theme='light'] .board-chat-dock-wrapper .chat-dock-user-item:hover strong {
+  color: #172033 !important;
+}
+
+[data-theme='light'] .board-chat-dock-wrapper .chat-dock-user-item:hover small {
+  color: #64748b !important;
+}
+
+/* Koyu tema görünümünü sabit ve okunaklı tut. */
+[data-theme='dark'] .board-chat-dock-wrapper .board-chat-dock-panel,
+[data-theme='dark'] .board-chat-dock-wrapper .chat-dock-header,
+[data-theme='dark'] .board-chat-dock-wrapper .chat-dock-search,
+[data-theme='dark'] .board-chat-dock-wrapper .chat-dock-list,
+[data-theme='dark'] .board-chat-dock-wrapper .board-chat-dock-panel form {
+  background: #0e1626 !important;
+  color: #f8fafc !important;
+  border-color: #243247 !important;
+}
+
+[data-theme='dark'] .board-chat-dock-wrapper .chat-dock-search input,
+[data-theme='dark'] .board-chat-dock-wrapper .board-chat-dock-panel form input {
+  background: #172033 !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+[data-theme='dark'] .board-chat-dock-wrapper .chat-dock-user-item:hover {
+  background: #17233a !important;
+  border-color: #2c3b55 !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.board-chat-dock-wrapper .chat-dock-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.board-chat-dock-wrapper .chat-dock-list::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 999px;
+  border: 2px solid var(--panel-bg);
+}
+
+/* =========================================================
+   PANOVIO V6 - AÇIK TEMA / AUTH / ŞİFRE SIFIRLAMA /
+   AKTİF GÖREV FİLTRESİ / KAYDET / MY TASKS SCROLLBAR
+   Yalnızca aşağıdaki gerçek bileşenleri hedefler.
+   ========================================================= */
+
+/* ---------- 1. Giriş ekranı: açık tema ---------- */
+[data-theme='light'] .auth-hero-wrapper {
+  background-color: #f4f7fb !important;
+  background-image:
+    radial-gradient(circle at 12% 15%, rgba(56,189,248,.12) 0%, transparent 45%),
+    radial-gradient(circle at 88% 85%, rgba(99,102,241,.10) 0%, transparent 50%) !important;
+}
+
+[data-theme='light'] .auth-split-container {
+  background: #ffffff !important;
+  border: 1px solid #dbe4ef !important;
+  box-shadow: 0 28px 65px rgba(15,23,42,.16) !important;
+}
+
+/* Sol tanıtım paneli de gerçekten açık olsun. */
+[data-theme='light'] .auth-showcase-panel {
+  background: linear-gradient(145deg, #f8fbff 0%, #eef5ff 100%) !important;
+  border-right-color: #dbe4ef !important;
+  box-shadow: none !important;
+}
+
+[data-theme='light'] .auth-showcase-panel h1,
+[data-theme='light'] .auth-showcase-panel .feature-item strong {
+  color: #172033 !important;
+}
+
+[data-theme='light'] .auth-showcase-panel .showcase-desc,
+[data-theme='light'] .auth-showcase-panel .feature-item p {
+  color: #64748b !important;
+}
+
+[data-theme='light'] .auth-showcase-panel .feature-item {
+  background: rgba(255,255,255,.76) !important;
+  border-color: #dbe4ef !important;
+}
+
+/* Panovio logosundaki "Pano" açık zeminde de marka rengiyle okunur. */
+[data-theme='light'] .auth-showcase-panel .auth-brand-head span > span:first-child {
+  color: #2563eb !important;
+  -webkit-text-fill-color: #2563eb !important;
+}
+
+[data-theme='light'] .auth-form-panel,
+[data-theme='light'] .auth-card-modern {
+  background: #ffffff !important;
+  color: #172033 !important;
+}
+
+[data-theme='light'] .auth-header-content h2 {
+  color: #172033 !important;
+}
+
+[data-theme='light'] .auth-header-content p {
+  color: #64748b !important;
+}
+
+[data-theme='light'] .auth-modern-form label {
+  color: #64748b !important;
+}
+
+[data-theme='light'] .input-field-wrap {
+  background: #f8fafc !important;
+  border-color: #dbe4ef !important;
+  color: #64748b !important;
+}
+
+[data-theme='light'] .input-field-wrap input {
+  background: transparent !important;
+  color: #172033 !important;
+}
+
+[data-theme='light'] .input-field-wrap input::placeholder {
+  color: #94a3b8 !important;
+}
+
+[data-theme='light'] .input-field-wrap:hover,
+[data-theme='light'] .input-field-wrap:focus-within {
+  background: #ffffff !important;
+  border-color: #38bdf8 !important;
+  color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(56,189,248,.12) !important;
+}
+
+[data-theme='light'] .input-field-wrap:hover input,
+[data-theme='light'] .input-field-wrap:focus-within input {
+  color: #172033 !important;
+}
+
+[data-theme='light'] .demo-accounts-divider span,
+[data-theme='light'] .auth-switch-footer {
+  color: #64748b !important;
+}
+
+[data-theme='light'] .btn-demo-fill {
+  background: #f8fafc !important;
+  border-color: #dbe4ef !important;
+  color: #172033 !important;
+}
+
+[data-theme='light'] .btn-demo-fill:hover {
+  background: #eff6ff !important;
+  border-color: #93c5fd !important;
+}
+
+/* ---------- 2. Şifre sıfırlama / kod doğrulama ---------- */
+.forgot-modal-card .forgot-header {
+  position: relative !important;
+  min-height: 68px !important;
+  padding-right: 68px !important;
+}
+
+.forgot-modal-card .btn-modal-close-custom {
+  position: absolute !important;
+  top: 17px !important;
+  right: 20px !important;
+  left: auto !important;
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  min-height: 34px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 9px !important;
+  z-index: 20 !important;
+}
+
+.forgot-modal-card .btn-modal-close-custom svg {
+  display: block !important;
+  width: 18px !important;
+  height: 18px !important;
+  stroke: currentColor !important;
+  opacity: 1 !important;
+}
+
+[data-theme='light'] .forgot-modal-card {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-color: #dbe4ef !important;
+}
+
+[data-theme='light'] .forgot-modal-card .forgot-header {
+  border-bottom-color: #e2e8f0 !important;
+}
+
+[data-theme='light'] .forgot-modal-card .forgot-title-wrap h3 {
+  color: #172033 !important;
+}
+
+[data-theme='light'] .forgot-modal-card .btn-modal-close-custom {
+  background: #f8fafc !important;
+  border: 1px solid #dbe4ef !important;
+  color: #64748b !important;
+}
+
+[data-theme='light'] .forgot-modal-card .btn-modal-close-custom:hover {
+  background: #fef2f2 !important;
+  border-color: #fecaca !important;
+  color: #dc2626 !important;
+}
+
+[data-theme='light'] .forgot-modal-card .forgot-desc-text,
+[data-theme='light'] .forgot-modal-card label {
+  color: #64748b !important;
+}
+
+/* İkon ile e-posta metni üst üste gelmesin. */
+.forgot-modal-card .forgot-input-wrap {
+  position: relative !important;
+}
+
+.forgot-modal-card .forgot-input-icon {
+  position: absolute !important;
+  left: 14px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 3 !important;
+  pointer-events: none !important;
+}
+
+.forgot-modal-card .forgot-input-wrap input {
+  width: 100% !important;
+  padding: 10px 14px 10px 44px !important;
+}
+
+[data-theme='light'] .forgot-modal-card .forgot-input-wrap input,
+[data-theme='light'] .forgot-modal-card .pin-box {
+  background: #f8fafc !important;
+  border-color: #dbe4ef !important;
+  color: #172033 !important;
+}
+
+[data-theme='light'] .forgot-modal-card .forgot-input-wrap input::placeholder {
+  color: #94a3b8 !important;
+}
+
+[data-theme='light'] .forgot-modal-card .forgot-input-wrap input:hover,
+[data-theme='light'] .forgot-modal-card .forgot-input-wrap input:focus,
+[data-theme='light'] .forgot-modal-card .pin-box:hover,
+[data-theme='light'] .forgot-modal-card .pin-box:focus {
+  background: #ffffff !important;
+  color: #172033 !important;
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 0 3px rgba(56,189,248,.12) !important;
+}
+
+/* ---------- 3. Bana Ait Görevler: aktif/pasif çok net ---------- */
+.btn-my-tasks-toggle.active {
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%) !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 18px rgba(37,99,235,.25) !important;
+}
+
+.btn-my-tasks-toggle.active svg {
+  color: #ffffff !important;
+}
+
+[data-theme='light'] .btn-my-tasks-toggle.active {
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%) !important;
+  border-color: #2563eb !important;
+  color: #ffffff !important;
+}
+
+/* ---------- 4. Kart Düzenle: kaydet butonu ---------- */
+/* Disabled durumda da Panovio tasarımında kalsın, fakat pasif olduğu belli olsun. */
+.btn-modal-save-gradient:disabled {
+  background: linear-gradient(135deg, rgba(37,99,235,.40), rgba(79,70,229,.40)) !important;
+  border: 1px solid rgba(59,130,246,.18) !important;
+  color: rgba(255,255,255,.68) !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+}
+
+[data-theme='light'] .btn-modal-save-gradient:disabled {
+  background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%) !important;
+  border-color: #bfdbfe !important;
+  color: #64748b !important;
+}
+
+.btn-modal-save-gradient.active-changes,
+[data-theme='light'] .btn-modal-save-gradient.active-changes {
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%) !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+  box-shadow: 0 7px 20px rgba(37,99,235,.28) !important;
+}
+
+/* ---------- 5. Bana Atanan Görevler scrollbar ---------- */
+.profile-my-tasks-scroll {
+  scrollbar-width: thin !important;
+  scrollbar-color: #475569 transparent !important;
+  padding-right: 4px;
+}
+
+.profile-my-tasks-scroll::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+.profile-my-tasks-scroll::-webkit-scrollbar-track {
+  background: transparent !important;
+  border-radius: 999px !important;
+}
+
+.profile-my-tasks-scroll::-webkit-scrollbar-thumb {
+  background: #475569 !important;
+  border-radius: 999px !important;
+  border: 2px solid var(--panel-bg) !important;
+}
+
+[data-theme='light'] .profile-my-tasks-scroll {
+  scrollbar-color: #93c5fd #eff6ff !important;
+}
+
+[data-theme='light'] .profile-my-tasks-scroll::-webkit-scrollbar-track {
+  background: #eff6ff !important;
+}
+
+[data-theme='light'] .profile-my-tasks-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(#60a5fa, #2563eb) !important;
+  border-color: #eff6ff !important;
+}
+
+[data-theme='light'] .profile-my-tasks-scroll::-webkit-scrollbar-thumb:hover {
+  background: #2563eb !important;
+}
+
+/* =========================================================
+   PANOVIO V7 - SON UI DÜZELTMELERİ
+   Önceki V6 kurallarının üstüne yalnızca hedefli override.
+   ========================================================= */
+
+/* 1) Marka yazısı: iki temada da Panovio kimliği net kalsın. */
+.brand-logo > div > span > span:first-child,
+.auth-brand-head > div > div > span > span:first-child {
+  color: #2563eb !important;
+  -webkit-text-fill-color: #2563eb !important;
+}
+
+[data-theme='dark'] .brand-logo > div > span > span:first-child,
+[data-theme='dark'] .auth-brand-head > div > div > span > span:first-child {
+  color: #f8fafc !important;
+  -webkit-text-fill-color: #f8fafc !important;
+}
+
+/* 2) "Kayıt olmadan keşfedin": koyu dikdörtgen yerine modern divider. */
+.demo-accounts-divider {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin: 18px 0 !important;
+  width: 100% !important;
+}
+
+.demo-accounts-divider::before,
+.demo-accounts-divider::after {
+  content: "" !important;
+  display: block !important;
+  flex: 1 1 auto !important;
+  height: 1px !important;
+  background: var(--border-color) !important;
+}
+
+.demo-accounts-divider span {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 auto !important;
+  padding: 5px 10px !important;
+  border-radius: 999px !important;
+  background: transparent !important;
+  color: var(--text-muted) !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: .06em !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+[data-theme='light'] .demo-accounts-divider::before,
+[data-theme='light'] .demo-accounts-divider::after {
+  background: #dbe4ef !important;
+}
+
+[data-theme='light'] .demo-accounts-divider span {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #64748b !important;
+}
+
+[data-theme='dark'] .demo-accounts-divider span {
+  background: #111b2e !important;
+  border: 1px solid #26344b !important;
+  color: #94a3b8 !important;
+}
+
+/* 3) Şifre sıfırlama / Kod Doğrula X butonu:
+      boş kutu değil, ikon kesin görünür. */
+.forgot-modal-card .btn-modal-close-custom {
+  overflow: visible !important;
+  font-size: 0 !important;
+}
+
+.forgot-modal-card .btn-modal-close-custom svg {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 19px !important;
+  height: 19px !important;
+  min-width: 19px !important;
+  min-height: 19px !important;
+  stroke-width: 2.5 !important;
+}
+
+[data-theme='light'] .forgot-modal-card .btn-modal-close-custom {
+  background: #f8fafc !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #475569 !important;
+}
+
+[data-theme='light'] .forgot-modal-card .btn-modal-close-custom svg {
+  color: #475569 !important;
+  stroke: #475569 !important;
+}
+
+[data-theme='light'] .forgot-modal-card .btn-modal-close-custom:hover {
+  background: #fef2f2 !important;
+  border-color: #fca5a5 !important;
+  color: #dc2626 !important;
+}
+
+[data-theme='light'] .forgot-modal-card .btn-modal-close-custom:hover svg {
+  stroke: #dc2626 !important;
+}
+
+[data-theme='dark'] .forgot-modal-card .btn-modal-close-custom {
+  background: #172033 !important;
+  border: 1px solid #334155 !important;
+  color: #cbd5e1 !important;
+}
+
+[data-theme='dark'] .forgot-modal-card .btn-modal-close-custom svg {
+  color: #cbd5e1 !important;
+  stroke: #cbd5e1 !important;
+}
+
+/* 4) Açık tema üst bardaki Panovio yazısı okunaklı. */
+[data-theme='light'] .user-bar .brand-logo {
+  color: #172033 !important;
+}
+
+/* 5) Login inputlarında tarayıcı autofill görünümünü temaya yaklaştır. */
+.input-field-wrap input:-webkit-autofill,
+.input-field-wrap input:-webkit-autofill:hover,
+.input-field-wrap input:-webkit-autofill:focus,
+.forgot-input-wrap input:-webkit-autofill,
+.forgot-input-wrap input:-webkit-autofill:hover,
+.forgot-input-wrap input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text-main) !important;
+  caret-color: var(--text-main) !important;
+  transition: background-color 9999s ease-out 0s !important;
+}
+
+[data-theme='light'] .input-field-wrap input:-webkit-autofill,
+[data-theme='light'] .forgot-input-wrap input:-webkit-autofill {
+  -webkit-text-fill-color: #172033 !important;
+  caret-color: #172033 !important;
+}
+
+[data-theme='dark'] .input-field-wrap input:-webkit-autofill,
+[data-theme='dark'] .forgot-input-wrap input:-webkit-autofill {
+  -webkit-text-fill-color: #f8fafc !important;
+  caret-color: #f8fafc !important;
+}
+
+
+
+/* ========================================================
+   PANOVIO V8 - AÇIKLAMA İÇİ DOSYA EKLERİ
+   Yalnızca yeni attachment alanını etkiler.
+   ======================================================== */
+.description-attachment-box {
+  width: 100%;
+  border: 1.5px solid var(--border-color, #233147);
+  border-radius: 12px;
+  background: var(--input-bg, #152033);
+  overflow: hidden;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.description-attachment-box:focus-within {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, .14);
+}
+.description-attachment-box .description-attachment-textarea,
+.task-edit-modal-body .description-attachment-box .description-attachment-textarea {
+  width: 100% !important;
+  min-height: 92px;
+  margin: 0 !important;
+  padding: 12px 13px 8px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  resize: vertical;
+  background: transparent !important;
+  color: var(--text-main, #f8fafc) !important;
+}
+.description-attachment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 4px 10px 8px;
+}
+.description-attachment-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 8px 9px;
+  border: 1px solid var(--border-color, #26354b);
+  border-radius: 9px;
+  background: rgba(59, 130, 246, .07);
+  color: var(--text-main, #e5e7eb);
+  font-size: 12px;
+}
+.description-attachment-item > svg { flex: 0 0 auto; color: #38bdf8; }
+.description-attachment-item > span {
+  flex: 0 0 auto;
+  margin-left: auto;
+  color: var(--text-muted, #94a3b8);
+  font-size: 10.5px;
+}
+.attachment-open-btn,
+.attachment-name-static {
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text-main, #e5e7eb);
+  font: inherit;
+  text-align: left;
+}
+.attachment-open-btn { cursor: pointer; font-weight: 650; }
+.attachment-open-btn:hover { color: #38bdf8; text-decoration: underline; }
+.attachment-name-static { cursor: default; }
+.attachment-remove-btn,
+.attachment-download-btn {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  cursor: pointer;
+}
+.attachment-download-btn { color: #38bdf8; }
+.attachment-remove-btn { color: #ef4444; }
+.attachment-download-btn:hover { background: rgba(56, 189, 248, .12); }
+.attachment-remove-btn:hover { background: rgba(239, 68, 68, .12); }
+.description-attachment-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px 10px;
+  border-top: 1px solid var(--border-color, #233147);
+}
+.description-add-file-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border: 1px solid rgba(56, 189, 248, .35);
+  border-radius: 8px;
+  background: rgba(56, 189, 248, .08);
+  color: #38bdf8;
+  font-size: 11.5px;
+  font-weight: 750;
+  cursor: pointer;
+}
+.description-add-file-btn:hover { background: rgba(56, 189, 248, .15); }
+.description-attachment-toolbar small {
+  margin-left: auto;
+  color: var(--text-muted, #64748b);
+  font-size: 10px;
+}
+[data-theme='light'] .description-attachment-box { background: #fff; border-color: #dbe3ef; }
+[data-theme='light'] .description-attachment-item { background: #f7fbff; border-color: #dbeafe; }
+[data-theme='light'] .description-attachment-toolbar { border-top-color: #e5e7eb; }
+[data-theme='light'] .attachment-open-btn,
+[data-theme='light'] .attachment-name-static { color: #1e293b; }
+@media (max-width: 640px) {
+  .description-attachment-toolbar { align-items: flex-start; flex-direction: column; }
+  .description-attachment-toolbar small { margin-left: 0; }
+}
+
+/* =========================================================
+   PANOVIO V9 - LISTE EKLE + EKIP SOHBETI
+   Yalnızca ilgili bileşenleri hedefler.
+   ========================================================= */
+
+/* ---------- Başka bir liste ekle ---------- */
+.panovio-add-list-form {
+  width: 310px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(15, 23, 42, .94);
+  border: 1px solid rgba(148, 163, 184, .18);
+  box-shadow: 0 18px 42px rgba(15, 23, 42, .28);
+  backdrop-filter: blur(16px);
+}
+.panovio-add-list-input {
+  width: 100%; box-sizing: border-box; height: 44px; padding: 0 14px;
+  border-radius: 11px; border: 1px solid #334155; outline: none;
+  background: #172033; color: #f8fafc; font: inherit; font-size: 14px;
+  transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.panovio-add-list-input::placeholder { color: #7f8da3; }
+.panovio-add-list-input:focus { border-color: #38bdf8; box-shadow: 0 0 0 3px rgba(56,189,248,.14); }
+.panovio-add-list-colors { display:flex; align-items:center; gap:10px; min-height:28px; }
+.panovio-add-list-color-label { margin-right:2px; font-size:12px; font-weight:700; color:#94a3b8; }
+.panovio-list-color-dot {
+  width: 22px; height: 22px; flex: 0 0 22px; border-radius: 999px; cursor:pointer;
+  border: 3px solid transparent; outline: 1px solid transparent;
+  box-shadow: 0 2px 6px rgba(0,0,0,.16); transition: transform .15s ease, outline-color .15s ease, border-color .15s ease;
+}
+.panovio-list-color-dot:hover { transform: translateY(-1px) scale(1.08); }
+.panovio-list-color-dot.is-selected { border-color: #0f172a; outline-color: #e2e8f0; transform: scale(1.08); }
+.panovio-add-list-actions { display:grid; grid-template-columns: 1fr 1fr; gap:9px; margin-top:1px; }
+.panovio-add-list-submit, .panovio-add-list-cancel {
+  height: 38px; border-radius: 10px; font: inherit; font-size:13px; font-weight:750; cursor:pointer; transition: all .18s ease;
+}
+.panovio-add-list-submit { border:1px solid #2563eb; background:linear-gradient(135deg,#38bdf8 0%,#2563eb 100%); color:#fff; box-shadow:0 7px 16px rgba(37,99,235,.22); }
+.panovio-add-list-submit:hover { transform:translateY(-1px); box-shadow:0 9px 20px rgba(37,99,235,.3); }
+.panovio-add-list-cancel { border:1px solid #334155; background:#172033; color:#cbd5e1; }
+.panovio-add-list-cancel:hover { background:#202c42; color:#fff; border-color:#475569; }
+[data-theme='light'] .panovio-add-list-form { background:rgba(255,255,255,.97); border-color:#dbe4ef; box-shadow:0 16px 38px rgba(30,64,175,.12); }
+[data-theme='light'] .panovio-add-list-input { background:#f8fafc; color:#172033; border-color:#d6e0ec; }
+[data-theme='light'] .panovio-add-list-input::placeholder { color:#8290a5; }
+[data-theme='light'] .panovio-add-list-color-label { color:#64748b; }
+[data-theme='light'] .panovio-list-color-dot.is-selected { border-color:#fff; outline-color:#334155; }
+[data-theme='light'] .panovio-add-list-cancel { background:#f8fafc; color:#475569; border-color:#d6e0ec; }
+[data-theme='light'] .panovio-add-list-cancel:hover { background:#eef4fb; color:#172033; border-color:#c6d5e6; }
+
+/* ---------- Ekip Sohbeti ---------- */
+.board-chat-dock-wrapper .board-chat-dock-panel {
+  width: 390px; height: min(570px, calc(100vh - 48px)); max-height: calc(100vh - 48px);
+  border-radius: 22px !important; overflow: hidden !important;
+  box-shadow: 0 24px 60px rgba(15,23,42,.28) !important;
+}
+.board-chat-dock-wrapper .chat-dock-header { min-height:68px; box-sizing:border-box; padding:16px 18px !important; flex:0 0 auto; }
+.board-chat-dock-wrapper .chat-dock-title-wrap { gap:10px; }
+.board-chat-dock-wrapper .chat-dock-title-wrap strong { font-size:18px !important; font-weight:800; letter-spacing:-.2px; }
+.board-chat-dock-wrapper .btn-dock-close { width:34px; height:34px; border-radius:10px; display:grid; place-items:center; padding:0; }
+.board-chat-dock-wrapper .chat-dock-directory,
+.board-chat-dock-wrapper .chat-dock-conversation { flex:1 1 auto; min-height:0; height:auto !important; display:flex; flex-direction:column; overflow:hidden; }
+.board-chat-dock-wrapper .chat-dock-search { flex:0 0 auto; padding:12px 14px !important; }
+.board-chat-dock-wrapper .chat-dock-search input { height:40px; box-sizing:border-box; border-radius:11px !important; padding-left:38px !important; font-size:13px !important; }
+.board-chat-dock-wrapper .search-dock-icon { left:26px !important; }
+.board-chat-dock-wrapper .chat-dock-list {
+  flex:1 1 0 !important; min-height:0 !important; overflow-y:auto !important; overflow-x:hidden;
+  padding:10px 12px 22px !important; gap:5px !important; overscroll-behavior:contain;
+}
+.board-chat-dock-wrapper .chat-dock-user-item { min-height:62px; box-sizing:border-box; padding:9px 10px !important; border-radius:12px !important; flex:0 0 auto; }
+.board-chat-dock-wrapper .avatar-circle-dock { width:40px !important; height:40px !important; flex:0 0 40px; font-size:13px !important; box-shadow:0 5px 12px rgba(37,99,235,.18); }
+.board-chat-dock-wrapper .chat-dock-user-item strong { font-size:13px !important; font-weight:750; line-height:1.3; }
+.board-chat-dock-wrapper .chat-dock-user-item small { margin-top:4px; font-size:11px !important; line-height:1.25; }
+.board-chat-dock-wrapper .chat-dock-messages { flex:1 1 0; min-height:0; padding:16px; overflow-y:auto; display:flex; flex-direction:column; gap:9px; overscroll-behavior:contain; }
+.board-chat-dock-wrapper .chat-dock-compose { flex:0 0 auto; padding:10px 12px !important; display:flex; align-items:center; gap:8px !important; border-top:1px solid var(--border-color); }
+.board-chat-dock-wrapper .chat-dock-message-input { flex:1; min-width:0; height:42px; box-sizing:border-box; padding:0 15px; border-radius:999px; border:1px solid var(--border-color); outline:none; background:var(--hover-bg); color:var(--text-main); font:inherit; font-size:13px; transition:border-color .18s ease, box-shadow .18s ease; }
+.board-chat-dock-wrapper .chat-dock-message-input:focus { border-color:#38bdf8 !important; box-shadow:0 0 0 3px rgba(56,189,248,.12); }
+.board-chat-dock-wrapper .chat-dock-send { width:42px; height:42px; flex:0 0 42px; display:grid; place-items:center; padding:0; border:0; border-radius:999px; cursor:pointer; color:#fff; background:linear-gradient(135deg,#38bdf8 0%,#2563eb 100%); box-shadow:0 7px 16px rgba(37,99,235,.25); transition:transform .18s ease, opacity .18s ease, box-shadow .18s ease; }
+.board-chat-dock-wrapper .chat-dock-send:not(:disabled):hover { transform:translateY(-1px); box-shadow:0 9px 20px rgba(37,99,235,.32); }
+.board-chat-dock-wrapper .chat-dock-send:disabled { cursor:not-allowed; opacity:.42; box-shadow:none; }
+[data-theme='light'] .board-chat-dock-wrapper .board-chat-dock-panel { background:#fff !important; border-color:#dbe4ef !important; box-shadow:0 24px 60px rgba(30,64,175,.16) !important; }
+[data-theme='light'] .board-chat-dock-wrapper .chat-dock-header { background:#fff !important; }
+[data-theme='light'] .board-chat-dock-wrapper .chat-dock-list,
+[data-theme='light'] .board-chat-dock-wrapper .chat-dock-messages { background:#fff !important; }
+[data-theme='light'] .board-chat-dock-wrapper .chat-dock-compose { background:#fff !important; }
+[data-theme='dark'] .board-chat-dock-wrapper .board-chat-dock-panel { background:#0e1626 !important; border-color:#243247 !important; box-shadow:0 24px 60px rgba(0,0,0,.46) !important; }
+[data-theme='dark'] .board-chat-dock-wrapper .chat-dock-header,
+[data-theme='dark'] .board-chat-dock-wrapper .chat-dock-list,
+[data-theme='dark'] .board-chat-dock-wrapper .chat-dock-messages,
+[data-theme='dark'] .board-chat-dock-wrapper .chat-dock-compose { background:#0e1626 !important; }
+@media (max-width: 520px) {
+  .board-chat-dock-wrapper { right:12px; bottom:12px; left:12px; }
+  .board-chat-dock-wrapper .board-chat-dock-panel { width:100%; height:min(570px, calc(100vh - 24px)); max-height:calc(100vh - 24px); }
+}
+
+/* =========================================================
+   PANOVIO FINAL - HEADER / PROFIL YERLEŞİMİ
+   Yalnızca üst marka ve profil konumunu etkiler.
+   ========================================================= */
+
+/* Üst marka satırı daha kompakt; profil artık pano satırında görünür. */
+.user-bar {
+  min-height: 68px !important;
+  padding: 10px 30px !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* Logo: biraz daha dikkat çekici ama abartısız. */
+.user-bar .brand-logo {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 5px 10px 5px 4px !important;
+  border-radius: 14px !important;
+  transition: transform .2s ease, background .2s ease !important;
+}
+
+.user-bar .brand-logo > div {
+  gap: 11px !important;
+  transform: scale(1.06) !important;
+  transform-origin: left center !important;
+}
+
+.user-bar .brand-logo svg {
+  filter: drop-shadow(0 7px 15px rgba(37, 99, 235, .42)) !important;
+}
+
+.user-bar .brand-logo > div > span {
+  font-weight: 900 !important;
+  letter-spacing: -.035em !important;
+  text-shadow: 0 2px 12px rgba(15, 23, 42, .14) !important;
+}
+
+/* Profil aksiyonunu DOM'u değiştirmeden pano sekmeleri satırının sağına indir. */
+.user-bar-actions {
+  position: absolute !important;
+  top: calc(100% + 10px) !important;
+  right: 30px !important;
+  z-index: 6500 !important;
+  height: 42px !important;
+  display: flex !important;
+  align-items: center !important;
+  overflow: visible !important;
+}
+
+.boards-bar {
+  min-height: 62px !important;
+  padding: 10px 250px 10px 30px !important;
+  box-sizing: border-box !important;
+  overflow-x: auto !important;
+  overflow-y: visible !important;
+}
+
+.boards-list {
+  min-width: max-content !important;
+}
+
+.profile-nav-pill {
+  min-height: 40px !important;
+  padding: 5px 14px 5px 6px !important;
+  border-radius: 999px !important;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, .16) !important;
+  transition: transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease !important;
+}
+
+.profile-nav-pill:hover {
+  transform: translateY(-1px) !important;
+  border-color: rgba(96, 165, 250, .48) !important;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, .22) !important;
+}
+
+/* Dropdown yeni profil konumunun hemen altında açılır. */
+.user-bar-actions .profile-dropdown-menu {
+  top: calc(100% + 8px) !important;
+  right: 0 !important;
+  left: auto !important;
+  z-index: 7000 !important;
+}
+
+[data-theme='light'] .user-bar .brand-logo {
+  background: rgba(255, 255, 255, .42) !important;
+}
+
+[data-theme='light'] .profile-nav-pill {
+  background: rgba(255, 255, 255, .88) !important;
+  border-color: rgba(148, 163, 184, .35) !important;
+  color: #172033 !important;
+}
+
+[data-theme='dark'] .user-bar .brand-logo {
+  background: rgba(255, 255, 255, .025) !important;
+}
+
+[data-theme='dark'] .profile-nav-pill {
+  background: rgba(255, 255, 255, .075) !important;
+  border-color: rgba(148, 163, 184, .24) !important;
+}
+
+/* Dar ekranlarda pano sekmeleri profilin altına sıkışmasın. */
+@media (max-width: 760px) {
+  .user-bar {
+    min-height: 62px !important;
+    padding: 8px 14px !important;
+  }
+
+  .user-bar .brand-logo > div {
+    transform: scale(.96) !important;
+  }
+
+  .user-bar-actions {
+    top: calc(100% + 9px) !important;
+    right: 14px !important;
+    height: 40px !important;
+  }
+
+  .boards-bar {
+    min-height: 60px !important;
+    padding: 9px 178px 9px 14px !important;
+  }
+
+  .profile-nav-pill {
+    min-height: 38px !important;
+    padding-right: 9px !important;
+  }
+
+  .profile-nav-pill > span {
+    display: block !important;
+    max-width: 105px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .boards-bar {
+    padding-right: 66px !important;
+  }
+
+  .profile-nav-pill {
+    width: 42px !important;
+    min-width: 42px !important;
+    padding: 5px !important;
+    justify-content: center !important;
+  }
+
+  .profile-nav-pill > span {
+    display: none !important;
+  }
+
+  .profile-nav-pill .avatar-circle {
+    margin: 0 !important;
+  }
+}
+/* =========================================================
+   PANOVIO FINAL - DRAG/DROP + SOHBET BOŞ DURUM DÜZELTMESİ
+   ========================================================= */
+
+/* Drag sırasında hover animasyonunun DnD transformuna karışmasını engeller.
+   Kart document.body portalına taşındığı için koordinatlar viewport ile birebir kalır. */
+.task-card.task-card-dragging {
+  margin: 0 !important;
+  cursor: grabbing !important;
+  box-sizing: border-box !important;
+  z-index: 99999 !important;
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.32) !important;
+  border-color: rgba(56, 189, 248, 0.65) !important;
+  transition: box-shadow 0.12s ease, border-color 0.12s ease !important;
+}
+
+.task-card.task-card-dragging:hover {
+  /* DnD kütüphanesinin inline transform değeri korunur. */
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.32) !important;
+}
+
+/* Sohbet kişi listesi boş olduğunda kullanıcıya açıklayıcı durum göster. */
+.board-chat-dock-wrapper .chat-dock-empty-state {
+  flex: 1 1 auto;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 24px 42px;
+  color: var(--text-muted);
+}
+
+.board-chat-dock-wrapper .chat-dock-empty-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 13px;
+  border-radius: 15px;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.10);
+  border: 1px solid rgba(56, 189, 248, 0.20);
+}
+
+.board-chat-dock-wrapper .chat-dock-empty-state strong {
+  color: var(--text-main) !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  margin-bottom: 7px;
+}
+
+.board-chat-dock-wrapper .chat-dock-empty-state span {
+  max-width: 260px;
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   PANOVIO - EKIP SOHBETI SON SCROLL / COMPOSER DUZELTMESI
+   Yalnizca sohbet panelini hedefler.
+   ========================================================= */
+
+.board-chat-dock-wrapper .board-chat-dock-panel {
+  display: flex !important;
+  flex-direction: column !important;
+  height: min(570px, calc(100vh - 48px)) !important;
+  max-height: calc(100vh - 48px) !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* Kisi listesi ekrani */
+.board-chat-dock-wrapper .chat-dock-directory {
+  flex: 1 1 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-search {
+  flex: 0 0 auto !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-list {
+  flex: 1 1 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+  scrollbar-gutter: stable !important;
+}
+
+/* Bireysel sohbet ekrani */
+.board-chat-dock-wrapper .chat-dock-conversation {
+  flex: 1 1 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-messages {
+  flex: 1 1 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+  scrollbar-gutter: stable !important;
+}
+
+/* Mesaj yazma alani her zaman panelin altinda gorunur */
+.board-chat-dock-wrapper .chat-dock-compose {
+  position: relative !important;
+  inset: auto !important;
+  flex: 0 0 64px !important;
+  min-height: 64px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 10px 12px !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  z-index: 5 !important;
+}
+
+/* Chromium / Electron scrollbar gorunurlugu */
+.board-chat-dock-wrapper .chat-dock-list::-webkit-scrollbar,
+.board-chat-dock-wrapper .chat-dock-messages::-webkit-scrollbar {
+  width: 9px !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-list::-webkit-scrollbar-track,
+.board-chat-dock-wrapper .chat-dock-messages::-webkit-scrollbar-track {
+  background: rgba(148, 163, 184, 0.10) !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-list::-webkit-scrollbar-thumb,
+.board-chat-dock-wrapper .chat-dock-messages::-webkit-scrollbar-thumb {
+  background: #64748b !important;
+  border-radius: 999px !important;
+  border: 2px solid transparent !important;
+  background-clip: padding-box !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-list::-webkit-scrollbar-thumb:hover,
+.board-chat-dock-wrapper .chat-dock-messages::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8 !important;
+  background-clip: padding-box !important;
+}
+
+@media (max-width: 520px) {
+  .board-chat-dock-wrapper .board-chat-dock-panel {
+    height: calc(100vh - 24px) !important;
+    max-height: calc(100vh - 24px) !important;
+  }
+}
+
+/* =========================================================
+   PANOVIO - SOHBET YAZMA ALANI KESIN SABITLEME
+   Sadece bireysel sohbet ekranini hedefler.
+   ========================================================= */
+
+/* Panelin header disinda kalan govdesini kesin bir flex alani yap. */
+.board-chat-dock-wrapper .chat-dock-conversation {
+  position: relative !important;
+  flex: 1 1 0 !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  max-height: 100% !important;
+  display: grid !important;
+  grid-template-rows: minmax(0, 1fr) 64px !important;
+  overflow: hidden !important;
+}
+
+/* Sadece mesajlar kayar. */
+.board-chat-dock-wrapper .chat-dock-conversation > .chat-dock-messages {
+  grid-row: 1 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  box-sizing: border-box !important;
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+  margin: 0 !important;
+  padding: 16px !important;
+}
+
+/* Yazma formu kaydirma alaninin disinda, daima son satirda kalir. */
+.board-chat-dock-wrapper .chat-dock-conversation > .chat-dock-compose {
+  grid-row: 2 !important;
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  width: 100% !important;
+  height: 64px !important;
+  min-height: 64px !important;
+  max-height: 64px !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 10px 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  overflow: hidden !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 20 !important;
+  background: var(--panel-bg) !important;
+  border-top: 1px solid var(--border-color) !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-conversation > .chat-dock-compose .chat-dock-message-input {
+  display: block !important;
+  flex: 1 1 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.board-chat-dock-wrapper .chat-dock-conversation > .chat-dock-compose .chat-dock-send {
+  display: grid !important;
+  flex: 0 0 42px !important;
+  width: 42px !important;
+  height: 42px !important;
+  visibility: visible !important;
+  opacity: 1;
+}
+
+/* Panoya Üye Davet Et - kapatma X simgesi */
+button[aria-label="Davet penceresini kapat"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 46px !important;
+  height: 46px !important;
+  padding: 0 !important;
+  color: #94a3b8 !important;
+  background: transparent !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 12px !important;
+  cursor: pointer !important;
+}
+
+button[aria-label="Davet penceresini kapat"] svg {
+  display: block !important;
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important;
+  min-height: 22px !important;
+  stroke: #94a3b8 !important;
+  stroke-width: 2.5 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+button[aria-label="Davet penceresini kapat"]:hover {
+  background: var(--hover-bg) !important;
+  color: var(--text-main) !important;
+}
+
+button[aria-label="Davet penceresini kapat"]:hover svg {
+  stroke: var(--text-main) !important;
+}

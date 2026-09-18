@@ -1,0 +1,46 @@
+{
+  "name": "panovio-desktop",
+  "version": "1.0.0",
+  "description": "Panovio Akilli Gorev ve Proje Yonetim Sistemi masaustu uygulamasi",
+  "main": "main.js",
+  "author": "Panovio",
+  "license": "ISC",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^44.4.2",
+    "electron-builder": "^26.15.3",
+    "png-to-ico": "^3.0.2"
+  },
+  "build": {
+    "appId": "com.panovio.desktop",
+    "productName": "Panovio",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "main.js",
+      "package.json",
+      "build/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "../backend/frontend/dist",
+        "to": "frontend"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Panovio"
+    }
+  }
+}
