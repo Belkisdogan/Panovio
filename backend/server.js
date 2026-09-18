@@ -104,13 +104,18 @@ const allowedOrigins = [
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Electron, mobil uygulama ve sunucudan sunucuya gelen
-      // Origin içermeyen isteklere izin ver.
+      // Mobil, Electron ve Origin göndermeyen isteklere izin ver
       if (!origin) {
         return callback(null, true);
       }
 
-      if (allowedOrigins.includes(origin)) {
+      const isAllowedOrigin = allowedOrigins.includes(origin);
+
+      // Panovio'nun Vercel deployment adreslerine izin ver
+      const isPanovioVercelOrigin =
+        /^https:\/\/panovio-[a-z0-9-]+-belkisdogan\.vercel\.app$/i.test(origin);
+
+      if (isAllowedOrigin || isPanovioVercelOrigin) {
         return callback(null, true);
       }
 
