@@ -95,7 +95,30 @@ if (EMAIL_USER && EMAIL_PASS) {
 // ==========================================
 
 app.use(helmet());
-app.use(cors());
+const allowedOrigins = [
+  'https://panovio-sigma.vercel.app',
+  'http://localhost:5173',
+  'http://127.0.0.1:5173'
+];
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      // Electron, mobil uygulama ve sunucudan sunucuya gelen
+      // Origin içermeyen isteklere izin ver.
+      if (!origin) {
+        return callback(null, true);
+      }
+
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(new Error('CORS: Bu origin için erişim izni yok.'));
+    },
+    credentials: true
+  })
+);
 app.use(express.json());
 
 const generalLimiter = rateLimit({
